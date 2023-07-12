@@ -1,4 +1,3 @@
-/*
 module CoordinateCollector (
     input logic reset,
     input logic clk,
@@ -11,6 +10,7 @@ module CoordinateCollector (
     output logic done
 );
 
+/*
 typedef enum logic [1:0] {  
     GET_X = 2'b00,
     GET_Y = 2'b01,
@@ -36,7 +36,10 @@ always_comb begin
         UPDATE_MEM: if(enterNewCoord) next = GET_X;
                     else if(finishInit) next = FINISH;
                     else next = UPDATE_MEM;
+
+        FINISH: next = FINISH;
     endcase
-end 
-endmodule
+end
+
 */
+endmodule
