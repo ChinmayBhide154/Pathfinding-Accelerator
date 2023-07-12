@@ -28,6 +28,8 @@ typedef enum logic {
     PUSH = 2'b11
 } state;
 
+logic [1:0] next;
+
 logic [15:0] insertion_index;
 
 always_ff @(posedge clk or posedge reset) begin

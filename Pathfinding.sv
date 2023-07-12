@@ -41,6 +41,7 @@ module Pathfinding (
     output logic path
 );
 
+/*
 // Memories
 pathfinding_mem prev_vertex_discard_mem(
     .address(),		
@@ -90,6 +91,6 @@ pathfinding_mem prev_vertex_dist_queue_mem(
 	.q()	
 );
 
-
+*/
 
 endmodule  
