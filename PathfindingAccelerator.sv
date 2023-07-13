@@ -14,6 +14,7 @@ module PathfindingAccelerator (
 logic [7:0] Seven_Seg_Val[5:0];
 logic [3:0] Seven_Seg_Data[5:0];
 
+//Generate sseg decoders for hex output
 genvar i;
 
 generate

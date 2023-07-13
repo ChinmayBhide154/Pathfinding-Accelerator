@@ -10,18 +10,20 @@ module CoordinateCollector (
     output logic done
 );
 
-/*
+
 typedef enum logic [1:0] {  
     GET_X = 2'b00,
     GET_Y = 2'b01,
     UPDATE_MEM = 2'b10,
     FINISH = 2'b11
-} state;
+} stateType;
+
+stateType state = GET_X;
 
 logic [1:0] next;
 
 always_ff @(posedge clk or posedge reset) begin
-    if(reset) state <= INIT;
+    if(reset) state <= GET_X;
     else state <= next;
 end
 
@@ -41,5 +43,5 @@ always_comb begin
     endcase
 end
 
-*/
+
 endmodule
