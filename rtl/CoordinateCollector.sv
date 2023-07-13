@@ -7,15 +7,22 @@ module CoordinateCollector (
     input logic enterNewCoord,
     input logic finishInit,
 
+    output logic [6:0] hex0,
+    output logic [6:0] hex1,
+    output logic [6:0] hex2,
+    output logic [6:0] hex3,
+    output logic [6:0] hex4,
+    output logic [6:0] hex5,
+
     output logic done
 );
 
 
 typedef enum logic [1:0] {  
-    GET_X = 2'b00,
-    GET_Y = 2'b01,
-    UPDATE_MEM = 2'b10,
-    FINISH = 2'b11
+    GET_X = 43'b0110111_0000000_0000000_0000000_0000000_0000000_0,
+    GET_Y = 43'b1111011_0000000_0000000_0000000_0000000_0000000_0,
+    UPDATE_MEM = 43'b0,
+    FINISH = 43'b0111101_0011101_0010101_1101111_0000000_0000000_1
 } stateType;
 
 stateType state = GET_X;
@@ -42,6 +49,14 @@ always_comb begin
         FINISH: next = FINISH;
     endcase
 end
+
+assign hex0 = state[42:36];
+assign hex1 = state[35:29];
+assign hex2 = state[28:22];
+assign hex3 = state[21:15];
+assign hex4 = state[14:8];
+assign hex5 = state[7:1];
+assign done = state[0];
 
 
 endmodule
