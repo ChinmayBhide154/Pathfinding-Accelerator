@@ -14,6 +14,18 @@ module PathfindingAccelerator (
 logic [7:0] Seven_Seg_Val[5:0];
 logic [3:0] Seven_Seg_Data[5:0];
 
+//XMEM interface signals
+logic [7:0] XMEM_data;
+logic [7:0] XMEM_address;
+logic [7:0] XMEM_wren;
+
+//YMEM interface signals
+logic [7:0] YMEM_data;
+logic [7:0] YMEM_address;
+logic [7:0] YMEM_wren;
+
+logic data_collection_finished;
+
 //Generate sseg decoders for hex output
 genvar i;
 
@@ -33,6 +45,27 @@ assign HEX3 = Seven_Seg_Val[3];
 assign HEX4 = Seven_Seg_Val[4];
 assign HEX5 = Seven_Seg_Val[5];
 
-assign LEDR[0] = 1'b1;
+
+CoordinateCollector data_collector(
+    .reset(1'b0),
+    .clk(CLOCK_50),
+    .x_in(8'b0),
+    .y_in(8'b0),
+    .write_en(1'b1),
+    .enterNewCoord(~KEY[1]),
+    .finishInit(~KEY[0]),
+    .x_out(x_data_in),
+    .y_out(y_data_in),
+    .hex0(Seven_Seg_Data[0]),
+    .hex1(Seven_Seg_Data[1]),
+    .hex2(Seven_Seg_Data[2]),
+    .hex3(Seven_Seg_Data[3]),
+    .hex4(Seven_Seg_Data[4]),
+    .hex5(Seven_Seg_Data[5]),
+    .mem_wren(XMEM_wren),
+    .done(data_collection_finished)
+);
+
+
 
 endmodule

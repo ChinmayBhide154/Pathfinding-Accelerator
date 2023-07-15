@@ -4,6 +4,3 @@ incremental_db
 output_files
 **.txt
 **.bak
-**.qip
-**.qsf
-**.qpf

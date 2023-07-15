@@ -3,44 +3,39 @@ module CoordinateCollector (
     input logic clk,
     input logic [7:0] x_in,
     input logic [7:0] y_in,
-    //input logic transition,
     input logic write_en,
     input logic enterNewCoord,
     input logic finishInit,
 
-    output logic x_out,
-    output logic y_out,
+    output logic [7:0] x_out,
+    output logic [7:0] y_out,
 
-    output logic [6:0] hex0,
-    output logic [6:0] hex1,
-    output logic [6:0] hex2,
-    output logic [6:0] hex3,
-    output logic [6:0] hex4,
-    output logic [6:0] hex5,
+    output logic [3:0] hex0,
+    output logic [3:0] hex1,
+    output logic [3:0] hex2,
+    output logic [3:0] hex3,
+    output logic [3:0] hex4,
+    output logic [3:0] hex5,
 
     output logic mem_wren,
     output logic done
 );
 
+//States
+parameter INIT = 3'b000;
+parameter GET_X = 3'b001;
+parameter UPDATE_X_MEM = 3'b010;
+parameter GET_Y = 3'b011;
+parameter UPDATE_Y_MEM = 3'b100;
+parameter OPTION = 3'b101;
+parameter FINISH = 3'b110;
 
-typedef enum logic [1:0] {
-    INIT  = 3'b000,
-    GET_X = 3'b001,
-    UPDATE_X_MEM = 3'b010,
-    GET_Y = 3'b011,
-    UPDATE_Y_MEM = 3'b100,
-    OPTION = 3'b101,
-    FINISH = 3'b110
-} stateType;
-
-stateType state = GET_X;
-
-logic [1:0] next;
+logic [2:0] state, next;
 
 logic [7:0] address;
 
 always_ff @(posedge clk or posedge reset) begin
-    if(reset) state <= GET_X;
+    if(reset) state <= INIT;
     else state <= next;
 end
 
@@ -69,24 +64,28 @@ always_comb begin
         end
 
         FINISH: next = FINISH;
+
+        default: next = INIT;
     endcase
 end
 
-always_ff @(posedge clk or posedge reset) begin
-    case(state)
+always_ff @(posedge clk) begin
+    case(state) 
         INIT: begin
-            x_out <= 8'b0;
-            y_out <= 8'b0;
-            hex0 <= 7'b0;
-            hex1 <= 7'b0;
-            hex2 <= 7'b0;
-            hex3 <= 7'b0;
-            hex4 <= 7'b0;
-            hex5 <= 7'b0;
+            x_out <= 8'h00;
+            y_out <= 8'h00;
+
+            hex0 <= 4'h0;
+            hex1 <= 4'h0;
+            hex2 <= 4'h0;
+            hex3 <= 4'h0;
+            hex4 <= 4'h0;
+            hex5 <= 4'h0;
+
+            mem_wren <= 1'b0;
             done <= 1'b0;
 
-            address <= 8'b0;
-            mem_wren <= 1'b0;
+            address <= 8'h00;
         end
 
         GET_X: begin
@@ -94,15 +93,31 @@ always_ff @(posedge clk or posedge reset) begin
             mem_wren <= 1'b1;
         end
 
-        GET_Y: y_out <= y_in;
+        GET_Y: begin
+            y_out <= y_in;
+        end
 
         OPTION: begin
             mem_wren <= 1'b0;
             address = address + 8'b00000001;
         end
 
-        FINISH: done <= 1'b1;
+        FINISH: begin
+            x_out <= 8'h00;
+            y_out <= 8'h00;
+
+            hex0 <= 4'h0;
+            hex1 <= 4'h0;
+            hex2 <= 4'h0;
+            hex3 <= 4'h0;
+            hex4 <= 4'h0;
+            hex5 <= 4'h0;
+
+            mem_wren <= 1'b0;
+            done <= 1'b1;
+
+            address <= 8'h00;
+        end
     endcase
 end
-
 endmodule
