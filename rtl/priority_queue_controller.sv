@@ -21,6 +21,7 @@ module priority_queue_controller (
     output logic [15:0] prev_vertex_dist_queue
 );
 
+/*
 typedef enum logic {  
     INIT = 2'b00,
     OP_SELECT = 2'b01,
@@ -95,5 +96,6 @@ always_ff @(posedge clk or posedge reset) begin
         end
     endcase
 end
+*/
     
 endmodule

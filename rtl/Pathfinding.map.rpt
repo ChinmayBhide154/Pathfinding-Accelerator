@@ -1,0 +1,552 @@
+Analysis & Synthesis report for Pathfinding
+Sat Jul 15 17:47:47 2023
+Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |PathfindingAccelerator|CoordinateCollector:data_collector|state
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: CoordinateCollector:data_collector
+ 13. Port Connectivity Checks: "CoordinateCollector:data_collector"
+ 14. Port Connectivity Checks: "SevenSegmentDisplayDecoder:generate_sseg_decoders[5].SevenSegmentDisplayDecoder_inst"
+ 15. Port Connectivity Checks: "SevenSegmentDisplayDecoder:generate_sseg_decoders[4].SevenSegmentDisplayDecoder_inst"
+ 16. Port Connectivity Checks: "SevenSegmentDisplayDecoder:generate_sseg_decoders[3].SevenSegmentDisplayDecoder_inst"
+ 17. Port Connectivity Checks: "SevenSegmentDisplayDecoder:generate_sseg_decoders[2].SevenSegmentDisplayDecoder_inst"
+ 18. Port Connectivity Checks: "SevenSegmentDisplayDecoder:generate_sseg_decoders[1].SevenSegmentDisplayDecoder_inst"
+ 19. Port Connectivity Checks: "SevenSegmentDisplayDecoder:generate_sseg_decoders[0].SevenSegmentDisplayDecoder_inst"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+ 23. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Jul 15 17:47:47 2023       ;
+; Quartus Prime Version           ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
+; Revision Name                   ; Pathfinding                                 ;
+; Top-level Entity Name           ; PathfindingAccelerator                      ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 67                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                 ;
++---------------------------------------------------------------------------------+------------------------+--------------------+
+; Option                                                                          ; Setting                ; Default Value      ;
++---------------------------------------------------------------------------------+------------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6           ;                    ;
+; Top-level entity name                                                           ; PathfindingAccelerator ; Pathfinding        ;
+; Family name                                                                     ; Cyclone V              ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                    ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                     ; On                 ;
+; Enable compact report table                                                     ; Off                    ; Off                ;
+; Restructure Multiplexers                                                        ; Auto                   ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                    ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                    ; Off                ;
+; Preserve fewer node names                                                       ; On                     ; On                 ;
+; OpenCore Plus hardware evaluation                                               ; Enable                 ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001           ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993              ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto                   ; Auto               ;
+; Safe State Machine                                                              ; Off                    ; Off                ;
+; Extract Verilog State Machines                                                  ; On                     ; On                 ;
+; Extract VHDL State Machines                                                     ; On                     ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                    ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000                   ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                    ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                     ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                     ; On                 ;
+; Parallel Synthesis                                                              ; On                     ; On                 ;
+; DSP Block Balancing                                                             ; Auto                   ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                     ; On                 ;
+; Power-Up Don't Care                                                             ; On                     ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                    ; Off                ;
+; Remove Duplicate Registers                                                      ; On                     ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                    ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                    ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                    ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                    ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                    ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                     ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                    ; Off                ;
+; Optimization Technique                                                          ; Balanced               ; Balanced           ;
+; Carry Chain Length                                                              ; 70                     ; 70                 ;
+; Auto Carry Chains                                                               ; On                     ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                     ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                    ; Off                ;
+; Auto ROM Replacement                                                            ; On                     ; On                 ;
+; Auto RAM Replacement                                                            ; On                     ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                     ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto                   ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto                   ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                     ; On                 ;
+; Strict RAM Replacement                                                          ; Off                    ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                     ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                    ; Off                ;
+; Auto Resource Sharing                                                           ; Off                    ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                    ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                    ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                    ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                     ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                    ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                     ; On                 ;
+; Report Parameter Settings                                                       ; On                     ; On                 ;
+; Report Source Assignments                                                       ; On                     ; On                 ;
+; Report Connectivity Checks                                                      ; On                     ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                    ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                      ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation     ; Normal compilation ;
+; HDL message level                                                               ; Level2                 ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                    ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000                   ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000                   ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                    ; 100                ;
+; Clock MUX Protection                                                            ; On                     ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                    ; Off                ;
+; Block Design Naming                                                             ; Auto                   ; Auto               ;
+; SDC constraint protection                                                       ; Off                    ; Off                ;
+; Synthesis Effort                                                                ; Auto                   ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                     ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                    ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium                 ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto                   ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                     ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                     ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                    ; Off                ;
++---------------------------------------------------------------------------------+------------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 14          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
+; SevenSegmentDisplayDecoder.sv    ; yes             ; User SystemVerilog HDL File  ; C:/Git Repositories/Pathfinding-Accelerator/rtl/SevenSegmentDisplayDecoder.sv ;         ;
+; PathfindingAccelerator.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv     ;         ;
+; CoordinateCollector.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Git Repositories/Pathfinding-Accelerator/rtl/CoordinateCollector.sv        ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimate of Logic utilization (ALMs needed) ; 0      ;
+;                                             ;        ;
+; Combinational ALUT usage for logic          ; 0      ;
+;     -- 7 input functions                    ; 0      ;
+;     -- 6 input functions                    ; 0      ;
+;     -- 5 input functions                    ; 0      ;
+;     -- 4 input functions                    ; 0      ;
+;     -- <=3 input functions                  ; 0      ;
+;                                             ;        ;
+; Dedicated logic registers                   ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 67     ;
+;                                             ;        ;
+; Total DSP Blocks                            ; 0      ;
+;                                             ;        ;
+; Maximum fan-out node                        ; KEY[2] ;
+; Maximum fan-out                             ; 1      ;
+; Total fan-out                               ; 67     ;
+; Average fan-out                             ; 0.50   ;
++---------------------------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                   ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------+------------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name     ; Entity Name            ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------+------------------------+--------------+
+; |PathfindingAccelerator    ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 67   ; 0            ; |PathfindingAccelerator ; PathfindingAccelerator ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------+------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |PathfindingAccelerator|CoordinateCollector:data_collector|state                                                    ;
++--------------------+--------------+--------------+--------------------+-------------+--------------------+-------------+------------+
+; Name               ; state.FINISH ; state.OPTION ; state.UPDATE_Y_MEM ; state.GET_Y ; state.UPDATE_X_MEM ; state.GET_X ; state.INIT ;
++--------------------+--------------+--------------+--------------------+-------------+--------------------+-------------+------------+
+; state.INIT         ; 0            ; 0            ; 0                  ; 0           ; 0                  ; 0           ; 0          ;
+; state.GET_X        ; 0            ; 0            ; 0                  ; 0           ; 0                  ; 1           ; 1          ;
+; state.UPDATE_X_MEM ; 0            ; 0            ; 0                  ; 0           ; 1                  ; 0           ; 1          ;
+; state.GET_Y        ; 0            ; 0            ; 0                  ; 1           ; 0                  ; 0           ; 1          ;
+; state.UPDATE_Y_MEM ; 0            ; 0            ; 1                  ; 0           ; 0                  ; 0           ; 1          ;
+; state.OPTION       ; 0            ; 1            ; 0                  ; 0           ; 0                  ; 0           ; 1          ;
+; state.FINISH       ; 1            ; 0            ; 0                  ; 0           ; 0                  ; 0           ; 1          ;
++--------------------+--------------+--------------+--------------------+-------------+--------------------+-------------+------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                             ;
++-------------------------------------------------------+----------------------------------------+
+; Register name                                         ; Reason for Removal                     ;
++-------------------------------------------------------+----------------------------------------+
+; CoordinateCollector:data_collector|hex2[0,1]          ; Stuck at GND due to stuck port data_in ;
+; CoordinateCollector:data_collector|hex3[0..3]         ; Stuck at GND due to stuck port data_in ;
+; CoordinateCollector:data_collector|hex4[0..3]         ; Stuck at GND due to stuck port data_in ;
+; CoordinateCollector:data_collector|hex5[0..3]         ; Stuck at GND due to stuck port data_in ;
+; CoordinateCollector:data_collector|hex2[2,3]          ; Stuck at GND due to stuck port data_in ;
+; CoordinateCollector:data_collector|hex1[0..3]         ; Stuck at GND due to stuck port data_in ;
+; CoordinateCollector:data_collector|hex0[0..3]         ; Stuck at GND due to stuck port data_in ;
+; CoordinateCollector:data_collector|state~4            ; Lost fanout                            ;
+; CoordinateCollector:data_collector|state~5            ; Lost fanout                            ;
+; CoordinateCollector:data_collector|state~6            ; Lost fanout                            ;
+; CoordinateCollector:data_collector|state.INIT         ; Lost fanout                            ;
+; CoordinateCollector:data_collector|state.GET_X        ; Lost fanout                            ;
+; CoordinateCollector:data_collector|state.UPDATE_X_MEM ; Lost fanout                            ;
+; CoordinateCollector:data_collector|state.GET_Y        ; Lost fanout                            ;
+; CoordinateCollector:data_collector|state.UPDATE_Y_MEM ; Lost fanout                            ;
+; CoordinateCollector:data_collector|state.OPTION       ; Lost fanout                            ;
+; CoordinateCollector:data_collector|state.FINISH       ; Lost fanout                            ;
+; Total Number of Removed Registers = 34                ;                                        ;
++-------------------------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                     ;
++--------------------------------------------+---------------------------+--------------------------------------------------------+
+; Register name                              ; Reason for Removal        ; Registers Removed due to This Register                 ;
++--------------------------------------------+---------------------------+--------------------------------------------------------+
+; CoordinateCollector:data_collector|hex2[1] ; Stuck at GND              ; CoordinateCollector:data_collector|hex5[1],            ;
+;                                            ; due to stuck port data_in ; CoordinateCollector:data_collector|hex5[0],            ;
+;                                            ;                           ; CoordinateCollector:data_collector|hex2[2],            ;
+;                                            ;                           ; CoordinateCollector:data_collector|hex2[3]             ;
+; CoordinateCollector:data_collector|hex4[3] ; Stuck at GND              ; CoordinateCollector:data_collector|hex1[3],            ;
+;                                            ; due to stuck port data_in ; CoordinateCollector:data_collector|hex0[0],            ;
+;                                            ;                           ; CoordinateCollector:data_collector|hex0[1],            ;
+;                                            ;                           ; CoordinateCollector:data_collector|hex0[2]             ;
+; CoordinateCollector:data_collector|hex3[3] ; Stuck at GND              ; CoordinateCollector:data_collector|hex1[0],            ;
+;                                            ; due to stuck port data_in ; CoordinateCollector:data_collector|hex1[1],            ;
+;                                            ;                           ; CoordinateCollector:data_collector|hex1[2]             ;
+; CoordinateCollector:data_collector|state~4 ; Lost Fanouts              ; CoordinateCollector:data_collector|state.INIT,         ;
+;                                            ;                           ; CoordinateCollector:data_collector|state.UPDATE_X_MEM, ;
+;                                            ;                           ; CoordinateCollector:data_collector|state.UPDATE_Y_MEM  ;
+; CoordinateCollector:data_collector|state~5 ; Lost Fanouts              ; CoordinateCollector:data_collector|state.GET_X,        ;
+;                                            ;                           ; CoordinateCollector:data_collector|state.OPTION,       ;
+;                                            ;                           ; CoordinateCollector:data_collector|state.FINISH        ;
+; CoordinateCollector:data_collector|hex5[3] ; Stuck at GND              ; CoordinateCollector:data_collector|hex0[3]             ;
+;                                            ; due to stuck port data_in ;                                                        ;
+; CoordinateCollector:data_collector|state~6 ; Lost Fanouts              ; CoordinateCollector:data_collector|state.GET_Y         ;
++--------------------------------------------+---------------------------+--------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CoordinateCollector:data_collector ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; INIT           ; 000   ; Unsigned Binary                                        ;
+; GET_X          ; 001   ; Unsigned Binary                                        ;
+; UPDATE_X_MEM   ; 010   ; Unsigned Binary                                        ;
+; GET_Y          ; 011   ; Unsigned Binary                                        ;
+; UPDATE_Y_MEM   ; 100   ; Unsigned Binary                                        ;
+; OPTION         ; 101   ; Unsigned Binary                                        ;
+; FINISH         ; 110   ; Unsigned Binary                                        ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CoordinateCollector:data_collector"                                                                                                                                           ;
++--------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                                                                                                               ;
++--------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset        ; Input  ; Info     ; Stuck at GND                                                                                                                                                          ;
+; x_in         ; Input  ; Info     ; Stuck at GND                                                                                                                                                          ;
+; y_in         ; Input  ; Info     ; Stuck at GND                                                                                                                                                          ;
+; write_en     ; Input  ; Info     ; Stuck at VCC                                                                                                                                                          ;
+; x_out        ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "x_out[7..1]" have no fanouts                                              ;
+; x_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                   ;
+; y_out        ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "y_out[7..1]" have no fanouts                                              ;
+; y_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                   ;
+; mem_wren     ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (8 bits) it drives.  The 7 most-significant bit(s) in the port expression will be connected to GND. ;
+; mem_wren[-1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                   ;
+; done         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                   ;
++--------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SevenSegmentDisplayDecoder:generate_sseg_decoders[5].SevenSegmentDisplayDecoder_inst"                                                                                  ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                                               ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ssOut ; Output ; Warning  ; Output or bidir port (7 bits) is smaller than the port expression (8 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SevenSegmentDisplayDecoder:generate_sseg_decoders[4].SevenSegmentDisplayDecoder_inst"                                                                                  ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                                               ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ssOut ; Output ; Warning  ; Output or bidir port (7 bits) is smaller than the port expression (8 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SevenSegmentDisplayDecoder:generate_sseg_decoders[3].SevenSegmentDisplayDecoder_inst"                                                                                  ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                                               ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ssOut ; Output ; Warning  ; Output or bidir port (7 bits) is smaller than the port expression (8 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SevenSegmentDisplayDecoder:generate_sseg_decoders[2].SevenSegmentDisplayDecoder_inst"                                                                                  ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                                               ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ssOut ; Output ; Warning  ; Output or bidir port (7 bits) is smaller than the port expression (8 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SevenSegmentDisplayDecoder:generate_sseg_decoders[1].SevenSegmentDisplayDecoder_inst"                                                                                  ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                                               ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ssOut ; Output ; Warning  ; Output or bidir port (7 bits) is smaller than the port expression (8 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SevenSegmentDisplayDecoder:generate_sseg_decoders[0].SevenSegmentDisplayDecoder_inst"                                                                                  ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                                               ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ssOut ; Output ; Warning  ; Output or bidir port (7 bits) is smaller than the port expression (8 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 2                           ;
+;     normal            ; 2                           ;
+;         0 data inputs ; 2                           ;
+; boundary_port         ; 67                          ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
+    Info: Processing started: Sat Jul 15 17:47:40 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Pathfinding -c Pathfinding
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sevensegmentdisplaydecoder.sv
+    Info (12023): Found entity 1: SevenSegmentDisplayDecoder File: C:/Git Repositories/Pathfinding-Accelerator/rtl/SevenSegmentDisplayDecoder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file priority_queue_controller.sv
+    Info (12023): Found entity 1: priority_queue_controller File: C:/Git Repositories/Pathfinding-Accelerator/rtl/priority_queue_controller.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pathfindingaccelerator.sv
+    Info (12023): Found entity 1: PathfindingAccelerator File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pathfinding.sv
+    Info (12023): Found entity 1: Pathfinding File: C:/Git Repositories/Pathfinding-Accelerator/rtl/Pathfinding.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file coordinatecollector.sv
+    Info (12023): Found entity 1: CoordinateCollector File: C:/Git Repositories/Pathfinding-Accelerator/rtl/CoordinateCollector.sv Line: 1
+Info (12021): Found 2 design units, including 1 entities, in source file pathfinding_mem.vhd
+    Info (12022): Found design unit 1: pathfinding_mem-SYN File: C:/Git Repositories/Pathfinding-Accelerator/rtl/pathfinding_mem.vhd Line: 54
+    Info (12023): Found entity 1: pathfinding_mem File: C:/Git Repositories/Pathfinding-Accelerator/rtl/pathfinding_mem.vhd Line: 42
+Warning (10236): Verilog HDL Implicit Net warning at PathfindingAccelerator.sv(57): created implicit net for "x_data_in" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 57
+Warning (10236): Verilog HDL Implicit Net warning at PathfindingAccelerator.sv(58): created implicit net for "y_data_in" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 58
+Info (12127): Elaborating entity "PathfindingAccelerator" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at PathfindingAccelerator.sv(41): truncated value with size 8 to match size of target (7) File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 41
+Warning (10230): Verilog HDL assignment warning at PathfindingAccelerator.sv(42): truncated value with size 8 to match size of target (7) File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 42
+Warning (10230): Verilog HDL assignment warning at PathfindingAccelerator.sv(43): truncated value with size 8 to match size of target (7) File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 43
+Warning (10230): Verilog HDL assignment warning at PathfindingAccelerator.sv(44): truncated value with size 8 to match size of target (7) File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 44
+Warning (10230): Verilog HDL assignment warning at PathfindingAccelerator.sv(45): truncated value with size 8 to match size of target (7) File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 45
+Warning (10230): Verilog HDL assignment warning at PathfindingAccelerator.sv(46): truncated value with size 8 to match size of target (7) File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 46
+Warning (10034): Output port "LEDR" at PathfindingAccelerator.sv(5) has no driver File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 5
+Info (12128): Elaborating entity "SevenSegmentDisplayDecoder" for hierarchy "SevenSegmentDisplayDecoder:generate_sseg_decoders[0].SevenSegmentDisplayDecoder_inst" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 37
+Info (12128): Elaborating entity "CoordinateCollector" for hierarchy "CoordinateCollector:data_collector" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 67
+Info (10264): Verilog HDL Case Statement information at CoordinateCollector.sv(73): all case item expressions in this case statement are onehot File: C:/Git Repositories/Pathfinding-Accelerator/rtl/CoordinateCollector.sv Line: 73
+Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 5
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 5
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 5
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 5
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 5
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 5
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 5
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 5
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 5
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 5
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 6
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 6
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 6
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 6
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 6
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 6
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 6
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 7
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 7
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 7
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 7
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 7
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 7
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 7
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 8
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 8
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 8
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 8
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 8
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 8
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 8
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 9
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 9
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 9
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 9
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 9
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 9
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 9
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 10
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 10
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 10
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 10
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 10
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 10
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 10
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 12
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 12
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 12
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 12
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 12
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 12
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 12
+Info (17049): 10 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Git Repositories/Pathfinding-Accelerator/rtl/Pathfinding.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 15 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 3
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 4
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 4
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 4
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 4
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 4
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 4
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 4
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 4
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 4
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 4
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 3
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 3
+    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 2
+Info (21057): Implemented 67 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 52 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 80 warnings
+    Info: Peak virtual memory: 4850 megabytes
+    Info: Processing ended: Sat Jul 15 17:47:47 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:04
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Git Repositories/Pathfinding-Accelerator/rtl/Pathfinding.map.smsg.
+
+
