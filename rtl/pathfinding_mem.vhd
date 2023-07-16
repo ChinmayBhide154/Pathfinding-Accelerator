@@ -44,19 +44,19 @@ ENTITY pathfinding_mem IS
 	(
 		address		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		clock		: IN STD_LOGIC  := '1';
-		data		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+		data		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		wren		: IN STD_LOGIC ;
-		q		: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
+		q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
 	);
 END pathfinding_mem;
 
 
 ARCHITECTURE SYN OF pathfinding_mem IS
 
-	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (15 DOWNTO 0);
+	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (7 DOWNTO 0);
 
 BEGIN
-	q    <= sub_wire0(15 DOWNTO 0);
+	q    <= sub_wire0(7 DOWNTO 0);
 
 	altsyncram_component : altsyncram
 	GENERIC MAP (
@@ -73,7 +73,7 @@ BEGIN
 		ram_block_type => "M10K",
 		read_during_write_mode_port_a => "NEW_DATA_NO_NBE_READ",
 		widthad_a => 8,
-		width_a => 16,
+		width_a => 8,
 		width_byteena_a => 1
 	)
 	PORT MAP (

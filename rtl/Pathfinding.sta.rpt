@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Pathfinding
-Sat Jul 15 17:48:20 2023
+Sat Jul 15 18:30:30 2023
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -99,7 +99,7 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-14        ;   0.2%      ;
+;     Processors 2-14        ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -642,7 +642,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
-    Info: Processing started: Sat Jul 15 17:48:16 2023
+    Info: Processing started: Sat Jul 15 18:30:27 2023
 Info: Command: quartus_sta Pathfinding -c Pathfinding
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -702,9 +702,9 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332101): Design is fully constrained for setup requirements
 Info (332101): Design is fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5221 megabytes
-    Info: Processing ended: Sat Jul 15 17:48:20 2023
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 5225 megabytes
+    Info: Processing ended: Sat Jul 15 18:30:30 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

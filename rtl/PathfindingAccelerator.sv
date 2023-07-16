@@ -18,11 +18,13 @@ logic [3:0] Seven_Seg_Data[5:0];
 logic [7:0] XMEM_data;
 logic [7:0] XMEM_address;
 logic [7:0] XMEM_wren;
+logic [7:0] XMEM_q;
 
 //YMEM interface signals
 logic [7:0] YMEM_data;
 logic [7:0] YMEM_address;
 logic [7:0] YMEM_wren;
+logic [7:0] YMEM_q;
 
 logic data_collection_finished;
 
@@ -64,6 +66,22 @@ CoordinateCollector data_collector(
     .hex5(Seven_Seg_Data[5]),
     .mem_wren(XMEM_wren),
     .done(data_collection_finished)
+);
+
+pathfinding_mem XMEM(
+    .address(XMEM_address),		
+	.clock(CLOCK_50),		
+	.data(x_data_in),	
+	.wren(XMEM_wren),		
+	.q(XMEM_q)	
+);
+
+pathfinding_mem YMEM(
+    .address(YMEM_address),		
+	.clock(CLOCK_50),		
+	.data(YMEM_data),	
+	.wren(YMEM_wren),		
+	.q(YMEM_q)	
 );
 
 
