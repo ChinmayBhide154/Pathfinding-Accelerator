@@ -1,0 +1,2498 @@
+$comment
+	File created using the following command:
+		vcd file Pathfinding.msim.vcd -direction
+$end
+$date
+	Sat Jul 15 22:09:09 2023
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module pathfindingaccelerator_vhd_vec_tst $end
+$var wire 1 ! CLOCK_50 $end
+$var wire 1 " HEX0 [6] $end
+$var wire 1 # HEX0 [5] $end
+$var wire 1 $ HEX0 [4] $end
+$var wire 1 % HEX0 [3] $end
+$var wire 1 & HEX0 [2] $end
+$var wire 1 ' HEX0 [1] $end
+$var wire 1 ( HEX0 [0] $end
+$var wire 1 ) HEX1 [6] $end
+$var wire 1 * HEX1 [5] $end
+$var wire 1 + HEX1 [4] $end
+$var wire 1 , HEX1 [3] $end
+$var wire 1 - HEX1 [2] $end
+$var wire 1 . HEX1 [1] $end
+$var wire 1 / HEX1 [0] $end
+$var wire 1 0 HEX2 [6] $end
+$var wire 1 1 HEX2 [5] $end
+$var wire 1 2 HEX2 [4] $end
+$var wire 1 3 HEX2 [3] $end
+$var wire 1 4 HEX2 [2] $end
+$var wire 1 5 HEX2 [1] $end
+$var wire 1 6 HEX2 [0] $end
+$var wire 1 7 HEX3 [6] $end
+$var wire 1 8 HEX3 [5] $end
+$var wire 1 9 HEX3 [4] $end
+$var wire 1 : HEX3 [3] $end
+$var wire 1 ; HEX3 [2] $end
+$var wire 1 < HEX3 [1] $end
+$var wire 1 = HEX3 [0] $end
+$var wire 1 > HEX4 [6] $end
+$var wire 1 ? HEX4 [5] $end
+$var wire 1 @ HEX4 [4] $end
+$var wire 1 A HEX4 [3] $end
+$var wire 1 B HEX4 [2] $end
+$var wire 1 C HEX4 [1] $end
+$var wire 1 D HEX4 [0] $end
+$var wire 1 E HEX5 [6] $end
+$var wire 1 F HEX5 [5] $end
+$var wire 1 G HEX5 [4] $end
+$var wire 1 H HEX5 [3] $end
+$var wire 1 I HEX5 [2] $end
+$var wire 1 J HEX5 [1] $end
+$var wire 1 K HEX5 [0] $end
+$var wire 1 L KEY [3] $end
+$var wire 1 M KEY [2] $end
+$var wire 1 N KEY [1] $end
+$var wire 1 O KEY [0] $end
+$var wire 1 P LEDR [9] $end
+$var wire 1 Q LEDR [8] $end
+$var wire 1 R LEDR [7] $end
+$var wire 1 S LEDR [6] $end
+$var wire 1 T LEDR [5] $end
+$var wire 1 U LEDR [4] $end
+$var wire 1 V LEDR [3] $end
+$var wire 1 W LEDR [2] $end
+$var wire 1 X LEDR [1] $end
+$var wire 1 Y LEDR [0] $end
+$var wire 1 Z SW [9] $end
+$var wire 1 [ SW [8] $end
+$var wire 1 \ SW [7] $end
+$var wire 1 ] SW [6] $end
+$var wire 1 ^ SW [5] $end
+$var wire 1 _ SW [4] $end
+$var wire 1 ` SW [3] $end
+$var wire 1 a SW [2] $end
+$var wire 1 b SW [1] $end
+$var wire 1 c SW [0] $end
+
+$scope module i1 $end
+$var wire 1 d gnd $end
+$var wire 1 e vcc $end
+$var wire 1 f unknown $end
+$var wire 1 g devoe $end
+$var wire 1 h devclrn $end
+$var wire 1 i devpor $end
+$var wire 1 j ww_devoe $end
+$var wire 1 k ww_devclrn $end
+$var wire 1 l ww_devpor $end
+$var wire 1 m ww_altera_reserved_tms $end
+$var wire 1 n ww_altera_reserved_tck $end
+$var wire 1 o ww_altera_reserved_tdi $end
+$var wire 1 p ww_altera_reserved_tdo $end
+$var wire 1 q ww_CLOCK_50 $end
+$var wire 1 r ww_KEY [3] $end
+$var wire 1 s ww_KEY [2] $end
+$var wire 1 t ww_KEY [1] $end
+$var wire 1 u ww_KEY [0] $end
+$var wire 1 v ww_SW [9] $end
+$var wire 1 w ww_SW [8] $end
+$var wire 1 x ww_SW [7] $end
+$var wire 1 y ww_SW [6] $end
+$var wire 1 z ww_SW [5] $end
+$var wire 1 { ww_SW [4] $end
+$var wire 1 | ww_SW [3] $end
+$var wire 1 } ww_SW [2] $end
+$var wire 1 ~ ww_SW [1] $end
+$var wire 1 !! ww_SW [0] $end
+$var wire 1 "! ww_LEDR [9] $end
+$var wire 1 #! ww_LEDR [8] $end
+$var wire 1 $! ww_LEDR [7] $end
+$var wire 1 %! ww_LEDR [6] $end
+$var wire 1 &! ww_LEDR [5] $end
+$var wire 1 '! ww_LEDR [4] $end
+$var wire 1 (! ww_LEDR [3] $end
+$var wire 1 )! ww_LEDR [2] $end
+$var wire 1 *! ww_LEDR [1] $end
+$var wire 1 +! ww_LEDR [0] $end
+$var wire 1 ,! ww_HEX0 [6] $end
+$var wire 1 -! ww_HEX0 [5] $end
+$var wire 1 .! ww_HEX0 [4] $end
+$var wire 1 /! ww_HEX0 [3] $end
+$var wire 1 0! ww_HEX0 [2] $end
+$var wire 1 1! ww_HEX0 [1] $end
+$var wire 1 2! ww_HEX0 [0] $end
+$var wire 1 3! ww_HEX1 [6] $end
+$var wire 1 4! ww_HEX1 [5] $end
+$var wire 1 5! ww_HEX1 [4] $end
+$var wire 1 6! ww_HEX1 [3] $end
+$var wire 1 7! ww_HEX1 [2] $end
+$var wire 1 8! ww_HEX1 [1] $end
+$var wire 1 9! ww_HEX1 [0] $end
+$var wire 1 :! ww_HEX2 [6] $end
+$var wire 1 ;! ww_HEX2 [5] $end
+$var wire 1 <! ww_HEX2 [4] $end
+$var wire 1 =! ww_HEX2 [3] $end
+$var wire 1 >! ww_HEX2 [2] $end
+$var wire 1 ?! ww_HEX2 [1] $end
+$var wire 1 @! ww_HEX2 [0] $end
+$var wire 1 A! ww_HEX3 [6] $end
+$var wire 1 B! ww_HEX3 [5] $end
+$var wire 1 C! ww_HEX3 [4] $end
+$var wire 1 D! ww_HEX3 [3] $end
+$var wire 1 E! ww_HEX3 [2] $end
+$var wire 1 F! ww_HEX3 [1] $end
+$var wire 1 G! ww_HEX3 [0] $end
+$var wire 1 H! ww_HEX4 [6] $end
+$var wire 1 I! ww_HEX4 [5] $end
+$var wire 1 J! ww_HEX4 [4] $end
+$var wire 1 K! ww_HEX4 [3] $end
+$var wire 1 L! ww_HEX4 [2] $end
+$var wire 1 M! ww_HEX4 [1] $end
+$var wire 1 N! ww_HEX4 [0] $end
+$var wire 1 O! ww_HEX5 [6] $end
+$var wire 1 P! ww_HEX5 [5] $end
+$var wire 1 Q! ww_HEX5 [4] $end
+$var wire 1 R! ww_HEX5 [3] $end
+$var wire 1 S! ww_HEX5 [2] $end
+$var wire 1 T! ww_HEX5 [1] $end
+$var wire 1 U! ww_HEX5 [0] $end
+$var wire 1 V! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [19] $end
+$var wire 1 W! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [18] $end
+$var wire 1 X! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [17] $end
+$var wire 1 Y! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [16] $end
+$var wire 1 Z! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [15] $end
+$var wire 1 [! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [14] $end
+$var wire 1 \! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [13] $end
+$var wire 1 ]! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [12] $end
+$var wire 1 ^! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [11] $end
+$var wire 1 _! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [10] $end
+$var wire 1 `! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [9] $end
+$var wire 1 a! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [8] $end
+$var wire 1 b! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [7] $end
+$var wire 1 c! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [6] $end
+$var wire 1 d! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [5] $end
+$var wire 1 e! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [4] $end
+$var wire 1 f! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [3] $end
+$var wire 1 g! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [2] $end
+$var wire 1 h! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [1] $end
+$var wire 1 i! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [0] $end
+$var wire 1 j! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [19] $end
+$var wire 1 k! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [18] $end
+$var wire 1 l! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [17] $end
+$var wire 1 m! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [16] $end
+$var wire 1 n! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [15] $end
+$var wire 1 o! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [14] $end
+$var wire 1 p! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [13] $end
+$var wire 1 q! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [12] $end
+$var wire 1 r! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [11] $end
+$var wire 1 s! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [10] $end
+$var wire 1 t! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [9] $end
+$var wire 1 u! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [8] $end
+$var wire 1 v! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [7] $end
+$var wire 1 w! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [6] $end
+$var wire 1 x! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [5] $end
+$var wire 1 y! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [4] $end
+$var wire 1 z! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [3] $end
+$var wire 1 {! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [2] $end
+$var wire 1 |! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [1] $end
+$var wire 1 }! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [0] $end
+$var wire 1 ~! \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\ [7] $end
+$var wire 1 !" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\ [6] $end
+$var wire 1 "" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\ [5] $end
+$var wire 1 #" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\ [4] $end
+$var wire 1 $" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\ [3] $end
+$var wire 1 %" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\ [2] $end
+$var wire 1 &" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\ [1] $end
+$var wire 1 '" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\ [0] $end
+$var wire 1 (" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\ [7] $end
+$var wire 1 )" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\ [6] $end
+$var wire 1 *" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\ [5] $end
+$var wire 1 +" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\ [4] $end
+$var wire 1 ," \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\ [3] $end
+$var wire 1 -" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\ [2] $end
+$var wire 1 ." \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\ [1] $end
+$var wire 1 /" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\ [0] $end
+$var wire 1 0" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [19] $end
+$var wire 1 1" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [18] $end
+$var wire 1 2" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [17] $end
+$var wire 1 3" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [16] $end
+$var wire 1 4" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [15] $end
+$var wire 1 5" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [14] $end
+$var wire 1 6" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [13] $end
+$var wire 1 7" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [12] $end
+$var wire 1 8" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [11] $end
+$var wire 1 9" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [10] $end
+$var wire 1 :" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [9] $end
+$var wire 1 ;" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [8] $end
+$var wire 1 <" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [7] $end
+$var wire 1 =" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [6] $end
+$var wire 1 >" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [5] $end
+$var wire 1 ?" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [4] $end
+$var wire 1 @" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [3] $end
+$var wire 1 A" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [2] $end
+$var wire 1 B" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [1] $end
+$var wire 1 C" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [0] $end
+$var wire 1 D" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [19] $end
+$var wire 1 E" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [18] $end
+$var wire 1 F" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [17] $end
+$var wire 1 G" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [16] $end
+$var wire 1 H" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [15] $end
+$var wire 1 I" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [14] $end
+$var wire 1 J" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [13] $end
+$var wire 1 K" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [12] $end
+$var wire 1 L" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [11] $end
+$var wire 1 M" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [10] $end
+$var wire 1 N" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [9] $end
+$var wire 1 O" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [8] $end
+$var wire 1 P" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [7] $end
+$var wire 1 Q" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [6] $end
+$var wire 1 R" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [5] $end
+$var wire 1 S" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [4] $end
+$var wire 1 T" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [3] $end
+$var wire 1 U" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [2] $end
+$var wire 1 V" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [1] $end
+$var wire 1 W" \XMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [0] $end
+$var wire 1 X" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [19] $end
+$var wire 1 Y" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [18] $end
+$var wire 1 Z" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [17] $end
+$var wire 1 [" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [16] $end
+$var wire 1 \" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [15] $end
+$var wire 1 ]" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [14] $end
+$var wire 1 ^" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [13] $end
+$var wire 1 _" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [12] $end
+$var wire 1 `" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [11] $end
+$var wire 1 a" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [10] $end
+$var wire 1 b" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [9] $end
+$var wire 1 c" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [8] $end
+$var wire 1 d" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [7] $end
+$var wire 1 e" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [6] $end
+$var wire 1 f" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [5] $end
+$var wire 1 g" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [4] $end
+$var wire 1 h" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [3] $end
+$var wire 1 i" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [2] $end
+$var wire 1 j" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [1] $end
+$var wire 1 k" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ [0] $end
+$var wire 1 l" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [19] $end
+$var wire 1 m" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [18] $end
+$var wire 1 n" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [17] $end
+$var wire 1 o" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [16] $end
+$var wire 1 p" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [15] $end
+$var wire 1 q" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [14] $end
+$var wire 1 r" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [13] $end
+$var wire 1 s" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [12] $end
+$var wire 1 t" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [11] $end
+$var wire 1 u" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [10] $end
+$var wire 1 v" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [9] $end
+$var wire 1 w" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [8] $end
+$var wire 1 x" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [7] $end
+$var wire 1 y" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [6] $end
+$var wire 1 z" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [5] $end
+$var wire 1 {" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [4] $end
+$var wire 1 |" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [3] $end
+$var wire 1 }" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [2] $end
+$var wire 1 ~" \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [1] $end
+$var wire 1 !# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ [0] $end
+$var wire 1 "# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\ [7] $end
+$var wire 1 ## \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\ [6] $end
+$var wire 1 $# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\ [5] $end
+$var wire 1 %# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\ [4] $end
+$var wire 1 &# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\ [3] $end
+$var wire 1 '# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\ [2] $end
+$var wire 1 (# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\ [1] $end
+$var wire 1 )# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\ [0] $end
+$var wire 1 *# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\ [7] $end
+$var wire 1 +# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\ [6] $end
+$var wire 1 ,# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\ [5] $end
+$var wire 1 -# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\ [4] $end
+$var wire 1 .# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\ [3] $end
+$var wire 1 /# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\ [2] $end
+$var wire 1 0# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\ [1] $end
+$var wire 1 1# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\ [0] $end
+$var wire 1 2# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [19] $end
+$var wire 1 3# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [18] $end
+$var wire 1 4# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [17] $end
+$var wire 1 5# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [16] $end
+$var wire 1 6# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [15] $end
+$var wire 1 7# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [14] $end
+$var wire 1 8# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [13] $end
+$var wire 1 9# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [12] $end
+$var wire 1 :# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [11] $end
+$var wire 1 ;# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [10] $end
+$var wire 1 <# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [9] $end
+$var wire 1 =# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [8] $end
+$var wire 1 ># \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [7] $end
+$var wire 1 ?# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [6] $end
+$var wire 1 @# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [5] $end
+$var wire 1 A# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [4] $end
+$var wire 1 B# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [3] $end
+$var wire 1 C# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [2] $end
+$var wire 1 D# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [1] $end
+$var wire 1 E# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ [0] $end
+$var wire 1 F# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [19] $end
+$var wire 1 G# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [18] $end
+$var wire 1 H# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [17] $end
+$var wire 1 I# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [16] $end
+$var wire 1 J# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [15] $end
+$var wire 1 K# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [14] $end
+$var wire 1 L# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [13] $end
+$var wire 1 M# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [12] $end
+$var wire 1 N# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [11] $end
+$var wire 1 O# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [10] $end
+$var wire 1 P# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [9] $end
+$var wire 1 Q# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [8] $end
+$var wire 1 R# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [7] $end
+$var wire 1 S# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [6] $end
+$var wire 1 T# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [5] $end
+$var wire 1 U# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [4] $end
+$var wire 1 V# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [3] $end
+$var wire 1 W# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [2] $end
+$var wire 1 X# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [1] $end
+$var wire 1 Y# \YMEM|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ [0] $end
+$var wire 1 Z# \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][6]~q\ $end
+$var wire 1 [# \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][7]~q\ $end
+$var wire 1 \# \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][6]~q\ $end
+$var wire 1 ]# \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][7]~q\ $end
+$var wire 1 ^# \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][6]~q\ $end
+$var wire 1 _# \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][7]~q\ $end
+$var wire 1 `# \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][6]~q\ $end
+$var wire 1 a# \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][7]~q\ $end
+$var wire 1 b# \auto_hub|~GND~combout\ $end
+$var wire 1 c# \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|clr_reg~_wirecell_combout\ $end
+$var wire 1 d# \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state[0]~_wirecell_combout\ $end
+$var wire 1 e# \KEY[2]~input_o\ $end
+$var wire 1 f# \KEY[3]~input_o\ $end
+$var wire 1 g# \SW[0]~input_o\ $end
+$var wire 1 h# \SW[1]~input_o\ $end
+$var wire 1 i# \SW[2]~input_o\ $end
+$var wire 1 j# \SW[3]~input_o\ $end
+$var wire 1 k# \SW[4]~input_o\ $end
+$var wire 1 l# \SW[5]~input_o\ $end
+$var wire 1 m# \SW[6]~input_o\ $end
+$var wire 1 n# \SW[7]~input_o\ $end
+$var wire 1 o# \SW[8]~input_o\ $end
+$var wire 1 p# \SW[9]~input_o\ $end
+$var wire 1 q# \~QUARTUS_CREATED_GND~I_combout\ $end
+$var wire 1 r# \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][6]~feeder_combout\ $end
+$var wire 1 s# \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][7]~feeder_combout\ $end
+$var wire 1 t# \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][6]~feeder_combout\ $end
+$var wire 1 u# \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][7]~feeder_combout\ $end
+$var wire 1 v# \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][6]~feeder_combout\ $end
+$var wire 1 w# \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][7]~feeder_combout\ $end
+$var wire 1 x# \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][6]~feeder_combout\ $end
+$var wire 1 y# \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][7]~feeder_combout\ $end
+$var wire 1 z# \altera_reserved_tms~input_o\ $end
+$var wire 1 {# \altera_reserved_tck~input_o\ $end
+$var wire 1 |# \altera_reserved_tdi~input_o\ $end
+$var wire 1 }# \altera_internal_jtag~TCKUTAP\ $end
+$var wire 1 ~# \altera_internal_jtag~TMSUTAP\ $end
+$var wire 1 !$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|node_ena_proc~0_combout\ $end
+$var wire 1 "$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state~9_combout\ $end
+$var wire 1 #$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state~10_combout\ $end
+$var wire 1 $$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state~11_combout\ $end
+$var wire 1 %$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state~12_combout\ $end
+$var wire 1 &$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state~13_combout\ $end
+$var wire 1 '$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|virtual_ir_dr_scan_proc~0_combout\ $end
+$var wire 1 ($ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state[15]~feeder_combout\ $end
+$var wire 1 )$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state~5_combout\ $end
+$var wire 1 *$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state~6_combout\ $end
+$var wire 1 +$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state~7_combout\ $end
+$var wire 1 ,$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state~8_combout\ $end
+$var wire 1 -$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|tms_cnt~1_combout\ $end
+$var wire 1 .$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|tms_cnt[0]~feeder_combout\ $end
+$var wire 1 /$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|tms_cnt~2_combout\ $end
+$var wire 1 0$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|tms_cnt~0_combout\ $end
+$var wire 1 1$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state~0_combout\ $end
+$var wire 1 2$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state~1_combout\ $end
+$var wire 1 3$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state~2_combout\ $end
+$var wire 1 4$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state~3_combout\ $end
+$var wire 1 5$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state~4_combout\ $end
+$var wire 1 6$ \~GND~combout\ $end
+$var wire 1 7$ \altera_internal_jtag~TDIUTAP\ $end
+$var wire 1 8$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[9]~feeder_combout\ $end
+$var wire 1 9$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[8]~feeder_combout\ $end
+$var wire 1 :$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[8]~DUPLICATE_q\ $end
+$var wire 1 ;$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[7]~feeder_combout\ $end
+$var wire 1 <$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[7]~DUPLICATE_q\ $end
+$var wire 1 =$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[6]~feeder_combout\ $end
+$var wire 1 >$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[3]~feeder_combout\ $end
+$var wire 1 ?$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2]~0_combout\ $end
+$var wire 1 @$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[0]~1_combout\ $end
+$var wire 1 A$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|Equal0~0_combout\ $end
+$var wire 1 B$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|Equal1~0_combout\ $end
+$var wire 1 C$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg~q\ $end
+$var wire 1 D$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg[9]~14_combout\ $end
+$var wire 1 E$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg[9]~feeder_combout\ $end
+$var wire 1 F$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~1_sumout\ $end
+$var wire 1 G$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[0]~feeder_combout\ $end
+$var wire 1 H$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][0]~feeder_combout\ $end
+$var wire 1 I$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][4]~feeder_combout\ $end
+$var wire 1 J$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][0]~0_combout\ $end
+$var wire 1 K$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|process_0~0_combout\ $end
+$var wire 1 L$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][3]~feeder_combout\ $end
+$var wire 1 M$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~6\ $end
+$var wire 1 N$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~9_sumout\ $end
+$var wire 1 O$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[2]~feeder_combout\ $end
+$var wire 1 P$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~10\ $end
+$var wire 1 Q$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~13_sumout\ $end
+$var wire 1 R$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[3]~feeder_combout\ $end
+$var wire 1 S$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~14\ $end
+$var wire 1 T$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~17_sumout\ $end
+$var wire 1 U$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[4]~feeder_combout\ $end
+$var wire 1 V$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~18\ $end
+$var wire 1 W$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~21_sumout\ $end
+$var wire 1 X$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[5]~feeder_combout\ $end
+$var wire 1 Y$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~22\ $end
+$var wire 1 Z$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~25_sumout\ $end
+$var wire 1 [$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[6]~feeder_combout\ $end
+$var wire 1 \$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~26\ $end
+$var wire 1 ]$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~29_sumout\ $end
+$var wire 1 ^$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[7]~feeder_combout\ $end
+$var wire 1 _$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|node_ena~0_combout\ $end
+$var wire 1 `$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|node_ena~1_combout\ $end
+$var wire 1 a$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|Equal0~1_combout\ $end
+$var wire 1 b$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|virtual_dr_scan_reg~q\ $end
+$var wire 1 c$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|node_ena~2_combout\ $end
+$var wire 1 d$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\ $end
+$var wire 1 e$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][2]~feeder_combout\ $end
+$var wire 1 f$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state~14_combout\ $end
+$var wire 1 g$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][0]~1_combout\ $end
+$var wire 1 h$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][0]~2_combout\ $end
+$var wire 1 i$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][2]~q\ $end
+$var wire 1 j$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][2]~feeder_combout\ $end
+$var wire 1 k$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][0]~0_combout\ $end
+$var wire 1 l$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][0]~1_combout\ $end
+$var wire 1 m$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][2]~q\ $end
+$var wire 1 n$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][1]~feeder_combout\ $end
+$var wire 1 o$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][1]~q\ $end
+$var wire 1 p$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][1]~feeder_combout\ $end
+$var wire 1 q$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][1]~q\ $end
+$var wire 1 r$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[7]~0_combout\ $end
+$var wire 1 s$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[1]~0_combout\ $end
+$var wire 1 t$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[1]~DUPLICATE_q\ $end
+$var wire 1 u$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[2]~1_combout\ $end
+$var wire 1 v$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[2]~feeder_combout\ $end
+$var wire 1 w$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[0]~2_combout\ $end
+$var wire 1 x$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[0]~feeder_combout\ $end
+$var wire 1 y$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_incr_addr~0_combout\ $end
+$var wire 1 z$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[0]~0_combout\ $end
+$var wire 1 {$ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg[2]~feeder_combout\ $end
+$var wire 1 |$ \YMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~1_sumout\ $end
+$var wire 1 }$ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[0]~feeder_combout\ $end
+$var wire 1 ~$ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][0]~feeder_combout\ $end
+$var wire 1 !% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][0]~3_combout\ $end
+$var wire 1 "% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][0]~q\ $end
+$var wire 1 #% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][0]~feeder_combout\ $end
+$var wire 1 $% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][0]~2_combout\ $end
+$var wire 1 %% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][0]~3_combout\ $end
+$var wire 1 &% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][0]~q\ $end
+$var wire 1 '% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|node_ena~3_combout\ $end
+$var wire 1 (% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][3]~feeder_combout\ $end
+$var wire 1 )% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][3]~q\ $end
+$var wire 1 *% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][3]~feeder_combout\ $end
+$var wire 1 +% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][3]~q\ $end
+$var wire 1 ,% \YMEM|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\ $end
+$var wire 1 -% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][2]~feeder_combout\ $end
+$var wire 1 .% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][2]~q\ $end
+$var wire 1 /% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][2]~feeder_combout\ $end
+$var wire 1 0% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][2]~q\ $end
+$var wire 1 1% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][1]~feeder_combout\ $end
+$var wire 1 2% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][1]~q\ $end
+$var wire 1 3% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][1]~feeder_combout\ $end
+$var wire 1 4% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][1]~q\ $end
+$var wire 1 5% \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~0_combout\ $end
+$var wire 1 6% \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[0]~2_combout\ $end
+$var wire 1 7% \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[1]~0_combout\ $end
+$var wire 1 8% \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[2]~1_combout\ $end
+$var wire 1 9% \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_incr_addr~0_combout\ $end
+$var wire 1 :% \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[6]~0_combout\ $end
+$var wire 1 ;% \YMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~2\ $end
+$var wire 1 <% \YMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~5_sumout\ $end
+$var wire 1 =% \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[1]~feeder_combout\ $end
+$var wire 1 >% \YMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~6\ $end
+$var wire 1 ?% \YMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~9_sumout\ $end
+$var wire 1 @% \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[2]~feeder_combout\ $end
+$var wire 1 A% \YMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~10\ $end
+$var wire 1 B% \YMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~13_sumout\ $end
+$var wire 1 C% \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[3]~feeder_combout\ $end
+$var wire 1 D% \YMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~14\ $end
+$var wire 1 E% \YMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~17_sumout\ $end
+$var wire 1 F% \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[4]~feeder_combout\ $end
+$var wire 1 G% \YMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~18\ $end
+$var wire 1 H% \YMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~21_sumout\ $end
+$var wire 1 I% \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[5]~feeder_combout\ $end
+$var wire 1 J% \YMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~22\ $end
+$var wire 1 K% \YMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~25_sumout\ $end
+$var wire 1 L% \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[6]~feeder_combout\ $end
+$var wire 1 M% \YMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~26\ $end
+$var wire 1 N% \YMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~29_sumout\ $end
+$var wire 1 O% \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[7]~feeder_combout\ $end
+$var wire 1 P% \YMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg[2]~feeder_combout\ $end
+$var wire 1 Q% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][4]~feeder_combout\ $end
+$var wire 1 R% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][4]~q\ $end
+$var wire 1 S% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][4]~feeder_combout\ $end
+$var wire 1 T% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][4]~q\ $end
+$var wire 1 U% \YMEM|altsyncram_component|auto_generated|mgl_prim2|process_0~0_combout\ $end
+$var wire 1 V% \YMEM|altsyncram_component|auto_generated|mgl_prim2|process_0~1_combout\ $end
+$var wire 1 W% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg~7_combout\ $end
+$var wire 1 X% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg[2]~2_combout\ $end
+$var wire 1 Y% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg[2]~1_combout\ $end
+$var wire 1 Z% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg[2]~3_combout\ $end
+$var wire 1 [% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][3]~q\ $end
+$var wire 1 \% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][3]~feeder_combout\ $end
+$var wire 1 ]% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][3]~q\ $end
+$var wire 1 ^% \XMEM|altsyncram_component|auto_generated|mgl_prim2|process_0~1_combout\ $end
+$var wire 1 _% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg~5_combout\ $end
+$var wire 1 `% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg~1_combout\ $end
+$var wire 1 a% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|reset_ena_reg_proc~0_combout\ $end
+$var wire 1 b% \XMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg[4]~feeder_combout\ $end
+$var wire 1 c% \YMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg[4]~feeder_combout\ $end
+$var wire 1 d% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg~11_combout\ $end
+$var wire 1 e% \XMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg[5]~feeder_combout\ $end
+$var wire 1 f% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg~12_combout\ $end
+$var wire 1 g% \XMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg[6]~feeder_combout\ $end
+$var wire 1 h% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg~13_combout\ $end
+$var wire 1 i% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg[4]~9_combout\ $end
+$var wire 1 j% \XMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg[3]~feeder_combout\ $end
+$var wire 1 k% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg[4]~8_combout\ $end
+$var wire 1 l% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg[4]~10_combout\ $end
+$var wire 1 m% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][4]~q\ $end
+$var wire 1 n% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][4]~feeder_combout\ $end
+$var wire 1 o% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][4]~q\ $end
+$var wire 1 p% \XMEM|altsyncram_component|auto_generated|mgl_prim2|is_in_use_reg~0_combout\ $end
+$var wire 1 q% \XMEM|altsyncram_component|auto_generated|mgl_prim2|is_in_use_reg~q\ $end
+$var wire 1 r% \YMEM|altsyncram_component|auto_generated|mgl_prim2|is_in_use_reg~0_combout\ $end
+$var wire 1 s% \YMEM|altsyncram_component|auto_generated|mgl_prim2|is_in_use_reg~q\ $end
+$var wire 1 t% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg~0_combout\ $end
+$var wire 1 u% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][0]~q\ $end
+$var wire 1 v% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][0]~feeder_combout\ $end
+$var wire 1 w% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][0]~q\ $end
+$var wire 1 x% \XMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~2\ $end
+$var wire 1 y% \XMEM|altsyncram_component|auto_generated|mgl_prim2|Add0~5_sumout\ $end
+$var wire 1 z% \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[1]~feeder_combout\ $end
+$var wire 1 {% \XMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg[1]~feeder_combout\ $end
+$var wire 1 |% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg~4_combout\ $end
+$var wire 1 }% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|Equal11~0_combout\ $end
+$var wire 1 ~% \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[1]~0_combout\ $end
+$var wire 1 !& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|reset_ena_reg~q\ $end
+$var wire 1 "& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]~3_combout\ $end
+$var wire 1 #& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|clr_reg_proc~0_combout\ $end
+$var wire 1 $& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|clr_reg~q\ $end
+$var wire 1 %& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg[8]~6_combout\ $end
+$var wire 1 && \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~5_combout\ $end
+$var wire 1 '& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~4_combout\ $end
+$var wire 1 (& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg~3_combout\ $end
+$var wire 1 )& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg_ena~0_combout\ $end
+$var wire 1 *& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg~2_combout\ $end
+$var wire 1 +& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg~1_combout\ $end
+$var wire 1 ,& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg~0_combout\ $end
+$var wire 1 -& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|design_hash_proc~0_combout\ $end
+$var wire 1 .& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|clear_signal~combout\ $end
+$var wire 1 /& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal~4_combout\ $end
+$var wire 1 0& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[4]~1_combout\ $end
+$var wire 1 1& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal~2_combout\ $end
+$var wire 1 2& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal~0_combout\ $end
+$var wire 1 3& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal~5_combout\ $end
+$var wire 1 4& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal~3_combout\ $end
+$var wire 1 5& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[0]~0_combout\ $end
+$var wire 1 6& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|identity_contrib_shift_reg[3]~feeder_combout\ $end
+$var wire 1 7& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|identity_contrib_shift_reg[0]~0_combout\ $end
+$var wire 1 8& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|identity_contrib_shift_reg[1]~feeder_combout\ $end
+$var wire 1 9& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]~2_combout\ $end
+$var wire 1 :& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric_ident_writedata[0]~0_combout\ $end
+$var wire 1 ;& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|design_hash_reg~1_combout\ $end
+$var wire 1 <& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|design_hash_reg~8_combout\ $end
+$var wire 1 =& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|design_hash_reg~9_combout\ $end
+$var wire 1 >& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[0]~3_combout\ $end
+$var wire 1 ?& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|design_hash_reg~6_combout\ $end
+$var wire 1 @& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|design_hash_reg~7_combout\ $end
+$var wire 1 A& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|design_hash_reg~4_combout\ $end
+$var wire 1 B& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|design_hash_reg~5_combout\ $end
+$var wire 1 C& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|design_hash_reg~2_combout\ $end
+$var wire 1 D& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~3_combout\ $end
+$var wire 1 E& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|tdo_bypass_reg~0_combout\ $end
+$var wire 1 F& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|tdo_bypass_reg~q\ $end
+$var wire 1 G& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~6_combout\ $end
+$var wire 1 H& \XMEM|altsyncram_component|auto_generated|mgl_prim2|bypass_reg_out~0_combout\ $end
+$var wire 1 I& \XMEM|altsyncram_component|auto_generated|mgl_prim2|bypass_reg_out~q\ $end
+$var wire 1 J& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter~2_combout\ $end
+$var wire 1 K& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4]~1_combout\ $end
+$var wire 1 L& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|clear_signal~combout\ $end
+$var wire 1 M& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter~4_combout\ $end
+$var wire 1 N& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter~5_combout\ $end
+$var wire 1 O& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter~0_combout\ $end
+$var wire 1 P& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|Equal0~0_combout\ $end
+$var wire 1 Q& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter~3_combout\ $end
+$var wire 1 R& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~0_combout\ $end
+$var wire 1 S& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~3_combout\ $end
+$var wire 1 T& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~5_combout\ $end
+$var wire 1 U& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~6_combout\ $end
+$var wire 1 V& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~8_combout\ $end
+$var wire 1 W& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~9_combout\ $end
+$var wire 1 X& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]~2_combout\ $end
+$var wire 1 Y& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~7_combout\ $end
+$var wire 1 Z& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~4_combout\ $end
+$var wire 1 [& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~1_combout\ $end
+$var wire 1 \& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][5]~feeder_combout\ $end
+$var wire 1 ]& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][5]~q\ $end
+$var wire 1 ^& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][5]~feeder_combout\ $end
+$var wire 1 _& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][5]~q\ $end
+$var wire 1 `& \CLOCK_50~input_o\ $end
+$var wire 1 a& \CLOCK_50~inputCLKENA0_outclk\ $end
+$var wire 1 b& \KEY[1]~input_o\ $end
+$var wire 1 c& \data_collector|state.INIT~feeder_combout\ $end
+$var wire 1 d& \data_collector|state.INIT~q\ $end
+$var wire 1 e& \KEY[0]~input_o\ $end
+$var wire 1 f& \data_collector|state.UPDATE_X_MEM~q\ $end
+$var wire 1 g& \data_collector|state.GET_Y~q\ $end
+$var wire 1 h& \data_collector|state.UPDATE_Y_MEM~q\ $end
+$var wire 1 i& \data_collector|Selector2~0_combout\ $end
+$var wire 1 j& \data_collector|state.OPTION~q\ $end
+$var wire 1 k& \data_collector|Selector0~0_combout\ $end
+$var wire 1 l& \data_collector|state.GET_X~q\ $end
+$var wire 1 m& \data_collector|Selector20~0_combout\ $end
+$var wire 1 n& \data_collector|mem_wren~q\ $end
+$var wire 1 o& \XMEM|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\ $end
+$var wire 1 p& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[7]~feeder_combout\ $end
+$var wire 1 q& \XMEM|altsyncram_component|auto_generated|mgl_prim2|process_0~2_combout\ $end
+$var wire 1 r& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[7]~1_combout\ $end
+$var wire 1 s& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[6]~feeder_combout\ $end
+$var wire 1 t& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[5]~feeder_combout\ $end
+$var wire 1 u& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[4]~feeder_combout\ $end
+$var wire 1 v& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[3]~feeder_combout\ $end
+$var wire 1 w& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[2]~feeder_combout\ $end
+$var wire 1 x& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[1]~feeder_combout\ $end
+$var wire 1 y& \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~feeder_combout\ $end
+$var wire 1 z& \XMEM|altsyncram_component|auto_generated|mgl_prim2|adapted_tdo~0_combout\ $end
+$var wire 1 {& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~0_combout\ $end
+$var wire 1 |& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|word_counter[0]~1_combout\ $end
+$var wire 1 }& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|word_counter[1]~DUPLICATE_q\ $end
+$var wire 1 ~& \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|word_counter~2_combout\ $end
+$var wire 1 !' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|word_counter[2]~DUPLICATE_q\ $end
+$var wire 1 "' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|word_counter~3_combout\ $end
+$var wire 1 #' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|word_counter[3]~DUPLICATE_q\ $end
+$var wire 1 $' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|word_counter~5_combout\ $end
+$var wire 1 %' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|word_counter~0_combout\ $end
+$var wire 1 &' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|word_counter~4_combout\ $end
+$var wire 1 '' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|WORD_SR~0_combout\ $end
+$var wire 1 (' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|WORD_SR~5_combout\ $end
+$var wire 1 )' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|WORD_SR~6_combout\ $end
+$var wire 1 *' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|WORD_SR[0]~2_combout\ $end
+$var wire 1 +' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|WORD_SR~4_combout\ $end
+$var wire 1 ,' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|WORD_SR~3_combout\ $end
+$var wire 1 -' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|WORD_SR~1_combout\ $end
+$var wire 1 .' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~1_combout\ $end
+$var wire 1 /' \YMEM|altsyncram_component|auto_generated|mgl_prim2|bypass_reg_out~0_combout\ $end
+$var wire 1 0' \YMEM|altsyncram_component|auto_generated|mgl_prim2|bypass_reg_out~q\ $end
+$var wire 1 1' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter~2_combout\ $end
+$var wire 1 2' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0]~1_combout\ $end
+$var wire 1 3' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|clear_signal~combout\ $end
+$var wire 1 4' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter~0_combout\ $end
+$var wire 1 5' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter~4_combout\ $end
+$var wire 1 6' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter~5_combout\ $end
+$var wire 1 7' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[3]~feeder_combout\ $end
+$var wire 1 8' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|Equal0~0_combout\ $end
+$var wire 1 9' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter~3_combout\ $end
+$var wire 1 :' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0]~feeder_combout\ $end
+$var wire 1 ;' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~0_combout\ $end
+$var wire 1 <' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~5_combout\ $end
+$var wire 1 =' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~6_combout\ $end
+$var wire 1 >' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~8_combout\ $end
+$var wire 1 ?' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~9_combout\ $end
+$var wire 1 @' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]~2_combout\ $end
+$var wire 1 A' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~7_combout\ $end
+$var wire 1 B' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~3_combout\ $end
+$var wire 1 C' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~4_combout\ $end
+$var wire 1 D' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~1_combout\ $end
+$var wire 1 E' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][5]~feeder_combout\ $end
+$var wire 1 F' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][5]~q\ $end
+$var wire 1 G' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][5]~feeder_combout\ $end
+$var wire 1 H' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][5]~q\ $end
+$var wire 1 I' \YMEM|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\ $end
+$var wire 1 J' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[7]~feeder_combout\ $end
+$var wire 1 K' \YMEM|altsyncram_component|auto_generated|mgl_prim2|process_0~2_combout\ $end
+$var wire 1 L' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\ $end
+$var wire 1 M' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[6]~feeder_combout\ $end
+$var wire 1 N' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[5]~feeder_combout\ $end
+$var wire 1 O' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[4]~feeder_combout\ $end
+$var wire 1 P' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[3]~feeder_combout\ $end
+$var wire 1 Q' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[2]~feeder_combout\ $end
+$var wire 1 R' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[1]~feeder_combout\ $end
+$var wire 1 S' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~feeder_combout\ $end
+$var wire 1 T' \YMEM|altsyncram_component|auto_generated|mgl_prim2|adapted_tdo~0_combout\ $end
+$var wire 1 U' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~2_combout\ $end
+$var wire 1 V' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~7_combout\ $end
+$var wire 1 W' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|tdo~q\ $end
+$var wire 1 X' \altera_internal_jtag~TDO\ $end
+$var wire 1 Y' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|tms_cnt\ [2] $end
+$var wire 1 Z' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|tms_cnt\ [1] $end
+$var wire 1 [' \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|tms_cnt\ [0] $end
+$var wire 1 \' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\ [7] $end
+$var wire 1 ]' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\ [6] $end
+$var wire 1 ^' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\ [5] $end
+$var wire 1 _' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\ [4] $end
+$var wire 1 `' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\ [3] $end
+$var wire 1 a' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\ [2] $end
+$var wire 1 b' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\ [1] $end
+$var wire 1 c' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\ [0] $end
+$var wire 1 d' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\ [7] $end
+$var wire 1 e' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\ [6] $end
+$var wire 1 f' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\ [5] $end
+$var wire 1 g' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\ [4] $end
+$var wire 1 h' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\ [3] $end
+$var wire 1 i' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\ [2] $end
+$var wire 1 j' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\ [1] $end
+$var wire 1 k' \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\ [0] $end
+$var wire 1 l' \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\ [7] $end
+$var wire 1 m' \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\ [6] $end
+$var wire 1 n' \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\ [5] $end
+$var wire 1 o' \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\ [4] $end
+$var wire 1 p' \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\ [3] $end
+$var wire 1 q' \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\ [2] $end
+$var wire 1 r' \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\ [1] $end
+$var wire 1 s' \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\ [0] $end
+$var wire 1 t' \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\ [7] $end
+$var wire 1 u' \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\ [6] $end
+$var wire 1 v' \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\ [5] $end
+$var wire 1 w' \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\ [4] $end
+$var wire 1 x' \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\ [3] $end
+$var wire 1 y' \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\ [2] $end
+$var wire 1 z' \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\ [1] $end
+$var wire 1 {' \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\ [0] $end
+$var wire 1 |' \XMEM|altsyncram_component|auto_generated|altsyncram1|q_a\ [7] $end
+$var wire 1 }' \XMEM|altsyncram_component|auto_generated|altsyncram1|q_a\ [6] $end
+$var wire 1 ~' \XMEM|altsyncram_component|auto_generated|altsyncram1|q_a\ [5] $end
+$var wire 1 !( \XMEM|altsyncram_component|auto_generated|altsyncram1|q_a\ [4] $end
+$var wire 1 "( \XMEM|altsyncram_component|auto_generated|altsyncram1|q_a\ [3] $end
+$var wire 1 #( \XMEM|altsyncram_component|auto_generated|altsyncram1|q_a\ [2] $end
+$var wire 1 $( \XMEM|altsyncram_component|auto_generated|altsyncram1|q_a\ [1] $end
+$var wire 1 %( \XMEM|altsyncram_component|auto_generated|altsyncram1|q_a\ [0] $end
+$var wire 1 &( \YMEM|altsyncram_component|auto_generated|altsyncram1|q_a\ [7] $end
+$var wire 1 '( \YMEM|altsyncram_component|auto_generated|altsyncram1|q_a\ [6] $end
+$var wire 1 (( \YMEM|altsyncram_component|auto_generated|altsyncram1|q_a\ [5] $end
+$var wire 1 )( \YMEM|altsyncram_component|auto_generated|altsyncram1|q_a\ [4] $end
+$var wire 1 *( \YMEM|altsyncram_component|auto_generated|altsyncram1|q_a\ [3] $end
+$var wire 1 +( \YMEM|altsyncram_component|auto_generated|altsyncram1|q_a\ [2] $end
+$var wire 1 ,( \YMEM|altsyncram_component|auto_generated|altsyncram1|q_a\ [1] $end
+$var wire 1 -( \YMEM|altsyncram_component|auto_generated|altsyncram1|q_a\ [0] $end
+$var wire 1 .( \XMEM|altsyncram_component|auto_generated|altsyncram1|q_b\ [7] $end
+$var wire 1 /( \XMEM|altsyncram_component|auto_generated|altsyncram1|q_b\ [6] $end
+$var wire 1 0( \XMEM|altsyncram_component|auto_generated|altsyncram1|q_b\ [5] $end
+$var wire 1 1( \XMEM|altsyncram_component|auto_generated|altsyncram1|q_b\ [4] $end
+$var wire 1 2( \XMEM|altsyncram_component|auto_generated|altsyncram1|q_b\ [3] $end
+$var wire 1 3( \XMEM|altsyncram_component|auto_generated|altsyncram1|q_b\ [2] $end
+$var wire 1 4( \XMEM|altsyncram_component|auto_generated|altsyncram1|q_b\ [1] $end
+$var wire 1 5( \XMEM|altsyncram_component|auto_generated|altsyncram1|q_b\ [0] $end
+$var wire 1 6( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR\ [3] $end
+$var wire 1 7( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR\ [2] $end
+$var wire 1 8( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR\ [1] $end
+$var wire 1 9( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR\ [0] $end
+$var wire 1 :( \YMEM|altsyncram_component|auto_generated|altsyncram1|q_b\ [7] $end
+$var wire 1 ;( \YMEM|altsyncram_component|auto_generated|altsyncram1|q_b\ [6] $end
+$var wire 1 <( \YMEM|altsyncram_component|auto_generated|altsyncram1|q_b\ [5] $end
+$var wire 1 =( \YMEM|altsyncram_component|auto_generated|altsyncram1|q_b\ [4] $end
+$var wire 1 >( \YMEM|altsyncram_component|auto_generated|altsyncram1|q_b\ [3] $end
+$var wire 1 ?( \YMEM|altsyncram_component|auto_generated|altsyncram1|q_b\ [2] $end
+$var wire 1 @( \YMEM|altsyncram_component|auto_generated|altsyncram1|q_b\ [1] $end
+$var wire 1 A( \YMEM|altsyncram_component|auto_generated|altsyncram1|q_b\ [0] $end
+$var wire 1 B( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\ [6] $end
+$var wire 1 C( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\ [5] $end
+$var wire 1 D( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\ [4] $end
+$var wire 1 E( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\ [3] $end
+$var wire 1 F( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\ [2] $end
+$var wire 1 G( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\ [1] $end
+$var wire 1 H( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\ [0] $end
+$var wire 1 I( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg\ [9] $end
+$var wire 1 J( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg\ [8] $end
+$var wire 1 K( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg\ [7] $end
+$var wire 1 L( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg\ [6] $end
+$var wire 1 M( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg\ [5] $end
+$var wire 1 N( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg\ [4] $end
+$var wire 1 O( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg\ [3] $end
+$var wire 1 P( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg\ [2] $end
+$var wire 1 Q( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg\ [1] $end
+$var wire 1 R( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|irsr_reg\ [0] $end
+$var wire 1 S( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR\ [3] $end
+$var wire 1 T( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR\ [2] $end
+$var wire 1 U( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR\ [1] $end
+$var wire 1 V( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR\ [0] $end
+$var wire 1 W( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\ [6] $end
+$var wire 1 X( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\ [5] $end
+$var wire 1 Y( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\ [4] $end
+$var wire 1 Z( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\ [3] $end
+$var wire 1 [( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\ [2] $end
+$var wire 1 \( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\ [1] $end
+$var wire 1 ]( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\ [0] $end
+$var wire 1 ^( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg\ [9] $end
+$var wire 1 _( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg\ [8] $end
+$var wire 1 `( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg\ [7] $end
+$var wire 1 a( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg\ [6] $end
+$var wire 1 b( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg\ [5] $end
+$var wire 1 c( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg\ [4] $end
+$var wire 1 d( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg\ [3] $end
+$var wire 1 e( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg\ [2] $end
+$var wire 1 f( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg\ [1] $end
+$var wire 1 g( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg\ [0] $end
+$var wire 1 h( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter\ [4] $end
+$var wire 1 i( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter\ [3] $end
+$var wire 1 j( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter\ [2] $end
+$var wire 1 k( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter\ [1] $end
+$var wire 1 l( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter\ [0] $end
+$var wire 1 m( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\ [3] $end
+$var wire 1 n( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\ [2] $end
+$var wire 1 o( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\ [1] $end
+$var wire 1 p( \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\ [0] $end
+$var wire 1 q( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|WORD_SR\ [3] $end
+$var wire 1 r( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|WORD_SR\ [2] $end
+$var wire 1 s( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|WORD_SR\ [1] $end
+$var wire 1 t( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|WORD_SR\ [0] $end
+$var wire 1 u( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter\ [4] $end
+$var wire 1 v( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter\ [3] $end
+$var wire 1 w( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter\ [2] $end
+$var wire 1 x( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter\ [1] $end
+$var wire 1 y( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter\ [0] $end
+$var wire 1 z( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\ [3] $end
+$var wire 1 {( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\ [2] $end
+$var wire 1 |( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\ [1] $end
+$var wire 1 }( \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\ [0] $end
+$var wire 1 ~( \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [30] $end
+$var wire 1 !) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [29] $end
+$var wire 1 ") \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [28] $end
+$var wire 1 #) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [27] $end
+$var wire 1 $) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [26] $end
+$var wire 1 %) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [25] $end
+$var wire 1 &) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [24] $end
+$var wire 1 ') \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [23] $end
+$var wire 1 () \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [22] $end
+$var wire 1 )) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [21] $end
+$var wire 1 *) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [20] $end
+$var wire 1 +) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [19] $end
+$var wire 1 ,) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [18] $end
+$var wire 1 -) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [17] $end
+$var wire 1 .) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [16] $end
+$var wire 1 /) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [15] $end
+$var wire 1 0) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [14] $end
+$var wire 1 1) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [13] $end
+$var wire 1 2) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [12] $end
+$var wire 1 3) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [11] $end
+$var wire 1 4) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [10] $end
+$var wire 1 5) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [9] $end
+$var wire 1 6) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [8] $end
+$var wire 1 7) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [7] $end
+$var wire 1 8) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [6] $end
+$var wire 1 9) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [5] $end
+$var wire 1 :) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [4] $end
+$var wire 1 ;) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [3] $end
+$var wire 1 <) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [2] $end
+$var wire 1 =) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [1] $end
+$var wire 1 >) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1\ [0] $end
+$var wire 1 ?) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state\ [15] $end
+$var wire 1 @) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state\ [14] $end
+$var wire 1 A) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state\ [13] $end
+$var wire 1 B) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state\ [12] $end
+$var wire 1 C) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state\ [11] $end
+$var wire 1 D) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state\ [10] $end
+$var wire 1 E) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state\ [9] $end
+$var wire 1 F) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state\ [8] $end
+$var wire 1 G) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state\ [7] $end
+$var wire 1 H) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state\ [6] $end
+$var wire 1 I) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state\ [5] $end
+$var wire 1 J) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state\ [4] $end
+$var wire 1 K) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state\ [3] $end
+$var wire 1 L) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state\ [2] $end
+$var wire 1 M) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state\ [1] $end
+$var wire 1 N) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state\ [0] $end
+$var wire 1 O) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [30] $end
+$var wire 1 P) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [29] $end
+$var wire 1 Q) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [28] $end
+$var wire 1 R) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [27] $end
+$var wire 1 S) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [26] $end
+$var wire 1 T) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [25] $end
+$var wire 1 U) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [24] $end
+$var wire 1 V) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [23] $end
+$var wire 1 W) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [22] $end
+$var wire 1 X) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [21] $end
+$var wire 1 Y) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [20] $end
+$var wire 1 Z) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [19] $end
+$var wire 1 [) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [18] $end
+$var wire 1 \) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [17] $end
+$var wire 1 ]) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [16] $end
+$var wire 1 ^) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [15] $end
+$var wire 1 _) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [14] $end
+$var wire 1 `) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [13] $end
+$var wire 1 a) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [12] $end
+$var wire 1 b) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [11] $end
+$var wire 1 c) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [10] $end
+$var wire 1 d) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [9] $end
+$var wire 1 e) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [8] $end
+$var wire 1 f) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [7] $end
+$var wire 1 g) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [6] $end
+$var wire 1 h) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [5] $end
+$var wire 1 i) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [4] $end
+$var wire 1 j) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [3] $end
+$var wire 1 k) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [2] $end
+$var wire 1 l) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [1] $end
+$var wire 1 m) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_0\ [0] $end
+$var wire 1 n) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|virtual_ir_tdo_sel_reg\ [1] $end
+$var wire 1 o) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|virtual_ir_tdo_sel_reg\ [0] $end
+$var wire 1 p) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg\ [3] $end
+$var wire 1 q) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg\ [2] $end
+$var wire 1 r) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg\ [1] $end
+$var wire 1 s) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg\ [0] $end
+$var wire 1 t) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|design_hash_reg\ [3] $end
+$var wire 1 u) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|design_hash_reg\ [2] $end
+$var wire 1 v) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|design_hash_reg\ [1] $end
+$var wire 1 w) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|design_hash_reg\ [0] $end
+$var wire 1 x) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg\ [2] $end
+$var wire 1 y) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg\ [1] $end
+$var wire 1 z) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg\ [0] $end
+$var wire 1 {) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|word_counter\ [4] $end
+$var wire 1 |) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|word_counter\ [3] $end
+$var wire 1 }) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|word_counter\ [2] $end
+$var wire 1 ~) \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|word_counter\ [1] $end
+$var wire 1 !* \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|word_counter\ [0] $end
+$var wire 1 "* \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal\ [4] $end
+$var wire 1 #* \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal\ [3] $end
+$var wire 1 $* \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal\ [2] $end
+$var wire 1 %* \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal\ [1] $end
+$var wire 1 &* \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal\ [0] $end
+$var wire 1 '* \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric_ident_writedata\ [3] $end
+$var wire 1 (* \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric_ident_writedata\ [2] $end
+$var wire 1 )* \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric_ident_writedata\ [1] $end
+$var wire 1 ** \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric_ident_writedata\ [0] $end
+$var wire 1 +* \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|identity_contrib_shift_reg\ [3] $end
+$var wire 1 ,* \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|identity_contrib_shift_reg\ [2] $end
+$var wire 1 -* \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|identity_contrib_shift_reg\ [1] $end
+$var wire 1 .* \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|identity_contrib_shift_reg\ [0] $end
+$var wire 1 /* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_data_reg\ [0] $end
+$var wire 1 0* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_data_reg\ [0] $end
+$var wire 1 1* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_process_0~0_combout\ $end
+$var wire 1 2* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_bypass_reg_out~q\ $end
+$var wire 1 3* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_WORD_SR\ [3] $end
+$var wire 1 4* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_WORD_SR\ [2] $end
+$var wire 1 5* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_WORD_SR\ [1] $end
+$var wire 1 6* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_WORD_SR\ [0] $end
+$var wire 1 7* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ir_loaded_address_reg\ [6] $end
+$var wire 1 8* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ir_loaded_address_reg\ [5] $end
+$var wire 1 9* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ir_loaded_address_reg\ [4] $end
+$var wire 1 :* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ir_loaded_address_reg\ [3] $end
+$var wire 1 ;* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ir_loaded_address_reg\ [2] $end
+$var wire 1 <* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ir_loaded_address_reg\ [1] $end
+$var wire 1 =* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ir_loaded_address_reg\ [0] $end
+$var wire 1 >* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_is_in_use_reg~q\ $end
+$var wire 1 ?* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_bypass_reg_out~q\ $end
+$var wire 1 @* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_WORD_SR\ [3] $end
+$var wire 1 A* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_WORD_SR\ [2] $end
+$var wire 1 B* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_WORD_SR\ [1] $end
+$var wire 1 C* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_WORD_SR\ [0] $end
+$var wire 1 D* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ir_loaded_address_reg\ [6] $end
+$var wire 1 E* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ir_loaded_address_reg\ [5] $end
+$var wire 1 F* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ir_loaded_address_reg\ [4] $end
+$var wire 1 G* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ir_loaded_address_reg\ [3] $end
+$var wire 1 H* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ir_loaded_address_reg\ [2] $end
+$var wire 1 I* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ir_loaded_address_reg\ [1] $end
+$var wire 1 J* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ir_loaded_address_reg\ [0] $end
+$var wire 1 K* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_is_in_use_reg~q\ $end
+$var wire 1 L* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_adapted_tdo~0_combout\ $end
+$var wire 1 M* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_adapted_tdo~0_combout\ $end
+$var wire 1 N* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_Add0~29_sumout\ $end
+$var wire 1 O* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_Add0~29_sumout\ $end
+$var wire 1 P* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_addr_reg\ [7] $end
+$var wire 1 Q* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_addr_reg\ [6] $end
+$var wire 1 R* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_addr_reg\ [5] $end
+$var wire 1 S* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_addr_reg\ [4] $end
+$var wire 1 T* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_addr_reg\ [3] $end
+$var wire 1 U* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_addr_reg\ [2] $end
+$var wire 1 V* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_addr_reg\ [1] $end
+$var wire 1 W* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_addr_reg\ [0] $end
+$var wire 1 X* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_Add0~25_sumout\ $end
+$var wire 1 Y* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_Add0~21_sumout\ $end
+$var wire 1 Z* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_Add0~17_sumout\ $end
+$var wire 1 [* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_Add0~13_sumout\ $end
+$var wire 1 \* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_Add0~9_sumout\ $end
+$var wire 1 ]* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_Add0~5_sumout\ $end
+$var wire 1 ^* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_Add0~1_sumout\ $end
+$var wire 1 _* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_addr_reg\ [7] $end
+$var wire 1 `* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_addr_reg\ [6] $end
+$var wire 1 a* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_addr_reg\ [5] $end
+$var wire 1 b* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_addr_reg\ [4] $end
+$var wire 1 c* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_addr_reg\ [3] $end
+$var wire 1 d* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_addr_reg\ [2] $end
+$var wire 1 e* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_addr_reg\ [1] $end
+$var wire 1 f* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_addr_reg\ [0] $end
+$var wire 1 g* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_Add0~25_sumout\ $end
+$var wire 1 h* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_Add0~21_sumout\ $end
+$var wire 1 i* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_Add0~17_sumout\ $end
+$var wire 1 j* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_Add0~13_sumout\ $end
+$var wire 1 k* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_Add0~9_sumout\ $end
+$var wire 1 l* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_Add0~5_sumout\ $end
+$var wire 1 m* \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_Add0~1_sumout\ $end
+$var wire 1 n* \YMEM|altsyncram_component|auto_generated|altsyncram1|ALT_INV_q_b\ [7] $end
+$var wire 1 o* \YMEM|altsyncram_component|auto_generated|altsyncram1|ALT_INV_q_b\ [6] $end
+$var wire 1 p* \YMEM|altsyncram_component|auto_generated|altsyncram1|ALT_INV_q_b\ [5] $end
+$var wire 1 q* \YMEM|altsyncram_component|auto_generated|altsyncram1|ALT_INV_q_b\ [4] $end
+$var wire 1 r* \YMEM|altsyncram_component|auto_generated|altsyncram1|ALT_INV_q_b\ [3] $end
+$var wire 1 s* \YMEM|altsyncram_component|auto_generated|altsyncram1|ALT_INV_q_b\ [2] $end
+$var wire 1 t* \YMEM|altsyncram_component|auto_generated|altsyncram1|ALT_INV_q_b\ [1] $end
+$var wire 1 u* \YMEM|altsyncram_component|auto_generated|altsyncram1|ALT_INV_q_b\ [0] $end
+$var wire 1 v* \XMEM|altsyncram_component|auto_generated|altsyncram1|ALT_INV_q_b\ [7] $end
+$var wire 1 w* \XMEM|altsyncram_component|auto_generated|altsyncram1|ALT_INV_q_b\ [6] $end
+$var wire 1 x* \XMEM|altsyncram_component|auto_generated|altsyncram1|ALT_INV_q_b\ [5] $end
+$var wire 1 y* \XMEM|altsyncram_component|auto_generated|altsyncram1|ALT_INV_q_b\ [4] $end
+$var wire 1 z* \XMEM|altsyncram_component|auto_generated|altsyncram1|ALT_INV_q_b\ [3] $end
+$var wire 1 {* \XMEM|altsyncram_component|auto_generated|altsyncram1|ALT_INV_q_b\ [2] $end
+$var wire 1 |* \XMEM|altsyncram_component|auto_generated|altsyncram1|ALT_INV_q_b\ [1] $end
+$var wire 1 }* \XMEM|altsyncram_component|auto_generated|altsyncram1|ALT_INV_q_b\ [0] $end
+$var wire 1 ~* \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_WORD_SR~5_combout\ $end
+$var wire 1 !+ \data_collector|ALT_INV_state.UPDATE_Y_MEM~q\ $end
+$var wire 1 "+ \data_collector|ALT_INV_state.GET_Y~q\ $end
+$var wire 1 #+ \data_collector|ALT_INV_state.UPDATE_X_MEM~q\ $end
+$var wire 1 $+ \data_collector|ALT_INV_state.GET_X~q\ $end
+$var wire 1 %+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_WORD_SR~6_combout\ $end
+$var wire 1 &+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_WORD_SR~5_combout\ $end
+$var wire 1 '+ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_word_counter~5_combout\ $end
+$var wire 1 (+ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_word_counter~3_combout\ $end
+$var wire 1 )+ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_Equal0~0_combout\ $end
+$var wire 1 *+ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_clear_signal~combout\ $end
+$var wire 1 ++ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_WORD_SR~3_combout\ $end
+$var wire 1 ,+ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_incr_addr~0_combout\ $end
+$var wire 1 -+ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_process_0~3_combout\ $end
+$var wire 1 .+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_data_shift_cntr_reg[0]~2_combout\ $end
+$var wire 1 /+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_data_shift_cntr_reg[2]~1_combout\ $end
+$var wire 1 0+ \data_collector|ALT_INV_mem_wren~q\ $end
+$var wire 1 1+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_Equal0~0_combout\ $end
+$var wire 1 2+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_clear_signal~combout\ $end
+$var wire 1 3+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_WORD_SR~3_combout\ $end
+$var wire 1 4+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_incr_addr~0_combout\ $end
+$var wire 1 5+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_process_0~3_combout\ $end
+$var wire 1 6+ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_data_reg[0]~0_combout\ $end
+$var wire 1 7+ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_data_shift_cntr_reg\ [2] $end
+$var wire 1 8+ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_data_shift_cntr_reg\ [1] $end
+$var wire 1 9+ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_data_shift_cntr_reg\ [0] $end
+$var wire 1 :+ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_word_counter\ [4] $end
+$var wire 1 ;+ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_word_counter\ [3] $end
+$var wire 1 <+ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_word_counter\ [2] $end
+$var wire 1 =+ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_word_counter\ [1] $end
+$var wire 1 >+ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_word_counter\ [0] $end
+$var wire 1 ?+ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_WORD_SR~0_combout\ $end
+$var wire 1 @+ \YMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_process_0~0_combout\ $end
+$var wire 1 A+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_data_reg[7]~0_combout\ $end
+$var wire 1 B+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_data_shift_cntr_reg\ [2] $end
+$var wire 1 C+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_data_shift_cntr_reg\ [1] $end
+$var wire 1 D+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_data_shift_cntr_reg\ [0] $end
+$var wire 1 E+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_word_counter\ [4] $end
+$var wire 1 F+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_word_counter\ [3] $end
+$var wire 1 G+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_word_counter\ [2] $end
+$var wire 1 H+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_word_counter\ [1] $end
+$var wire 1 I+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_word_counter\ [0] $end
+$var wire 1 J+ \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_WORD_SR~0_combout\ $end
+$var wire 1 K+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_virtual_ir_dr_scan_proc~0_combout\ $end
+$var wire 1 L+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_Equal0~0_combout\ $end
+$var wire 1 M+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_jtag_ir_reg\ [9] $end
+$var wire 1 N+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_jtag_ir_reg\ [8] $end
+$var wire 1 O+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_jtag_ir_reg\ [7] $end
+$var wire 1 P+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_jtag_ir_reg\ [6] $end
+$var wire 1 Q+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_jtag_ir_reg\ [5] $end
+$var wire 1 R+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_jtag_ir_reg\ [4] $end
+$var wire 1 S+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_jtag_ir_reg\ [3] $end
+$var wire 1 T+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_jtag_ir_reg\ [2] $end
+$var wire 1 U+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_jtag_ir_reg\ [1] $end
+$var wire 1 V+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_jtag_ir_reg\ [0] $end
+$var wire 1 W+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_virtual_dr_scan_reg~q\ $end
+$var wire 1 X+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_node_ena~0_combout\ $end
+$var wire 1 Y+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_hub_mode_reg\ [2] $end
+$var wire 1 Z+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_hub_mode_reg\ [1] $end
+$var wire 1 [+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_hub_mode_reg\ [0] $end
+$var wire 1 \+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_tdo_mux_out~6_combout\ $end
+$var wire 1 ]+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_tdo_mux_out~5_combout\ $end
+$var wire 1 ^+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_tdo_mux_out~4_combout\ $end
+$var wire 1 _+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_tdo_mux_out~3_combout\ $end
+$var wire 1 `+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_design_hash_reg\ [3] $end
+$var wire 1 a+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_design_hash_reg\ [2] $end
+$var wire 1 b+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_design_hash_reg\ [1] $end
+$var wire 1 c+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_design_hash_reg\ [0] $end
+$var wire 1 d+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_hub_minor_ver_reg\ [3] $end
+$var wire 1 e+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_hub_minor_ver_reg\ [2] $end
+$var wire 1 f+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_hub_minor_ver_reg\ [1] $end
+$var wire 1 g+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_hub_minor_ver_reg\ [0] $end
+$var wire 1 h+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_tdo_bypass_reg~q\ $end
+$var wire 1 i+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_tdo_mux_out~2_combout\ $end
+$var wire 1 j+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_tdo_mux_out~1_combout\ $end
+$var wire 1 k+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|ALT_INV_WORD_SR\ [3] $end
+$var wire 1 l+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|ALT_INV_WORD_SR\ [2] $end
+$var wire 1 m+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|ALT_INV_WORD_SR\ [1] $end
+$var wire 1 n+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|ALT_INV_WORD_SR\ [0] $end
+$var wire 1 o+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_Equal11~0_combout\ $end
+$var wire 1 p+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irsr_reg\ [9] $end
+$var wire 1 q+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irsr_reg\ [8] $end
+$var wire 1 r+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irsr_reg\ [7] $end
+$var wire 1 s+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irsr_reg\ [6] $end
+$var wire 1 t+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irsr_reg\ [5] $end
+$var wire 1 u+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irsr_reg\ [4] $end
+$var wire 1 v+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irsr_reg\ [3] $end
+$var wire 1 w+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irsr_reg\ [2] $end
+$var wire 1 x+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irsr_reg\ [1] $end
+$var wire 1 y+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irsr_reg\ [0] $end
+$var wire 1 z+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_tdo_mux_out~0_combout\ $end
+$var wire 1 {+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_virtual_ir_tdo_sel_reg\ [1] $end
+$var wire 1 |+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_virtual_ir_tdo_sel_reg\ [0] $end
+$var wire 1 }+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_hub_info_reg_ena~0_combout\ $end
+$var wire 1 ~+ \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|ALT_INV_splitter_nodes_receive_1\ [3] $end
+$var wire 1 !, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_state\ [15] $end
+$var wire 1 ", \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_state\ [14] $end
+$var wire 1 #, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_state\ [13] $end
+$var wire 1 $, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_state\ [12] $end
+$var wire 1 %, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_state\ [11] $end
+$var wire 1 &, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_state\ [10] $end
+$var wire 1 ', \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_state\ [9] $end
+$var wire 1 (, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_state\ [8] $end
+$var wire 1 ), \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_state\ [7] $end
+$var wire 1 *, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_state\ [6] $end
+$var wire 1 +, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_state\ [5] $end
+$var wire 1 ,, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_state\ [4] $end
+$var wire 1 -, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_state\ [3] $end
+$var wire 1 ., \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_state\ [2] $end
+$var wire 1 /, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_state\ [1] $end
+$var wire 1 0, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_state\ [0] $end
+$var wire 1 1, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_clr_reg~q\ $end
+$var wire 1 2, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_virtual_ir_scan_reg~q\ $end
+$var wire 1 3, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|ALT_INV_splitter_nodes_receive_0\ [3] $end
+$var wire 1 4, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irsr_reg[9]~14_combout\ $end
+$var wire 1 5, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_tms_cnt\ [2] $end
+$var wire 1 6, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_tms_cnt\ [1] $end
+$var wire 1 7, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_tms_cnt\ [0] $end
+$var wire 1 8, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_shadow_irf_reg[2][7]~q\ $end
+$var wire 1 9, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_shadow_irf_reg[2][6]~q\ $end
+$var wire 1 :, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_shadow_irf_reg[2][5]~q\ $end
+$var wire 1 ;, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_shadow_irf_reg[2][4]~q\ $end
+$var wire 1 <, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_shadow_irf_reg[2][3]~q\ $end
+$var wire 1 =, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_shadow_irf_reg[2][2]~q\ $end
+$var wire 1 >, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_shadow_irf_reg[2][1]~q\ $end
+$var wire 1 ?, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_shadow_irf_reg[2][0]~q\ $end
+$var wire 1 @, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_shadow_irf_reg[1][7]~q\ $end
+$var wire 1 A, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_shadow_irf_reg[1][6]~q\ $end
+$var wire 1 B, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_shadow_irf_reg[1][5]~q\ $end
+$var wire 1 C, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_shadow_irf_reg[1][4]~q\ $end
+$var wire 1 D, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_shadow_irf_reg[1][3]~q\ $end
+$var wire 1 E, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_shadow_irf_reg[1][2]~q\ $end
+$var wire 1 F, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_shadow_irf_reg[1][1]~q\ $end
+$var wire 1 G, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_shadow_irf_reg[1][0]~q\ $end
+$var wire 1 H, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irf_reg[2][7]~q\ $end
+$var wire 1 I, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irf_reg[2][6]~q\ $end
+$var wire 1 J, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irf_reg[2][5]~q\ $end
+$var wire 1 K, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irf_reg[2][4]~q\ $end
+$var wire 1 L, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irf_reg[2][3]~q\ $end
+$var wire 1 M, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irf_reg[2][2]~q\ $end
+$var wire 1 N, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irf_reg[2][1]~q\ $end
+$var wire 1 O, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irf_reg[2][0]~q\ $end
+$var wire 1 P, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irf_reg[1][7]~q\ $end
+$var wire 1 Q, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irf_reg[1][6]~q\ $end
+$var wire 1 R, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irf_reg[1][5]~q\ $end
+$var wire 1 S, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irf_reg[1][4]~q\ $end
+$var wire 1 T, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irf_reg[1][3]~q\ $end
+$var wire 1 U, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irf_reg[1][2]~q\ $end
+$var wire 1 V, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irf_reg[1][1]~q\ $end
+$var wire 1 W, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irf_reg[1][0]~q\ $end
+$var wire 1 X, \ALT_INV_altera_internal_jtag~TDIUTAP\ $end
+$var wire 1 Y, \ALT_INV_altera_internal_jtag~TCKUTAP\ $end
+$var wire 1 Z, \ALT_INV_altera_internal_jtag~TMSUTAP\ $end
+$var wire 1 [, \ALT_INV_~GND~combout\ $end
+$var wire 1 \, \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_WORD_SR~8_combout\ $end
+$var wire 1 ], \data_collector|ALT_INV_state.INIT~q\ $end
+$var wire 1 ^, \data_collector|ALT_INV_state.OPTION~q\ $end
+$var wire 1 _, \XMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_WORD_SR~8_combout\ $end
+$var wire 1 `, \YMEM|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|ALT_INV_WORD_SR~6_combout\ $end
+$var wire 1 a, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_identity_contrib_shift_reg\ [2] $end
+$var wire 1 b, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|ALT_INV_sldfabric_ident_writedata\ [3] $end
+$var wire 1 c, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|ALT_INV_sldfabric_ident_writedata\ [2] $end
+$var wire 1 d, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|ALT_INV_sldfabric_ident_writedata\ [1] $end
+$var wire 1 e, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|ALT_INV_sldfabric_ident_writedata\ [0] $end
+$var wire 1 f, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_design_hash_reg~8_combout\ $end
+$var wire 1 g, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|ALT_INV_WORD_SR~5_combout\ $end
+$var wire 1 h, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_design_hash_reg~6_combout\ $end
+$var wire 1 i, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_tms_cnt~1_combout\ $end
+$var wire 1 j, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_hub_mode_reg[2]~2_combout\ $end
+$var wire 1 k, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_design_hash_reg~4_combout\ $end
+$var wire 1 l, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irsr_reg[4]~9_combout\ $end
+$var wire 1 m, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irsr_reg[4]~8_combout\ $end
+$var wire 1 n, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_shadow_irf_reg[1][0]~1_combout\ $end
+$var wire 1 o, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_reset_ena_reg~q\ $end
+$var wire 1 p, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_design_hash_reg~1_combout\ $end
+$var wire 1 q, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_design_hash_reg[0]~0_combout\ $end
+$var wire 1 r, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_mixer_addr_reg_internal\ [4] $end
+$var wire 1 s, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_mixer_addr_reg_internal\ [3] $end
+$var wire 1 t, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_mixer_addr_reg_internal\ [2] $end
+$var wire 1 u, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_mixer_addr_reg_internal\ [1] $end
+$var wire 1 v, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_mixer_addr_reg_internal\ [0] $end
+$var wire 1 w, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_design_hash_proc~0_combout\ $end
+$var wire 1 x, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|ALT_INV_WORD_SR~0_combout\ $end
+$var wire 1 y, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|ALT_INV_word_counter\ [4] $end
+$var wire 1 z, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|ALT_INV_word_counter\ [3] $end
+$var wire 1 {, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|ALT_INV_word_counter\ [2] $end
+$var wire 1 |, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|ALT_INV_word_counter\ [1] $end
+$var wire 1 }, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|ALT_INV_word_counter\ [0] $end
+$var wire 1 ~, \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|ALT_INV_clear_signal~combout\ $end
+$var wire 1 !- \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_reset_ena_reg_proc~0_combout\ $end
+$var wire 1 "- \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irsr_reg[2]~2_combout\ $end
+$var wire 1 #- \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_shadow_irf_reg[2][0]~0_combout\ $end
+$var wire 1 $- \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irsr_reg[2]~1_combout\ $end
+$var wire 1 %- \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irf_reg[2][0]~2_combout\ $end
+$var wire 1 &- \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_irf_reg[1][0]~0_combout\ $end
+$var wire 1 '- \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|ALT_INV_state~14_combout\ $end
+$var wire 1 (- \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|ALT_INV_word_counter[1]~DUPLICATE_q\ $end
+$var wire 1 )- \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|ALT_INV_word_counter[3]~DUPLICATE_q\ $end
+$var wire 1 *- \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|ALT_INV_word_counter[2]~DUPLICATE_q\ $end
+$var wire 1 +- \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_jtag_ir_reg[7]~DUPLICATE_q\ $end
+$var wire 1 ,- \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|ALT_INV_jtag_ir_reg[8]~DUPLICATE_q\ $end
+$var wire 1 -- \XMEM|altsyncram_component|auto_generated|mgl_prim2|ALT_INV_ram_rom_data_shift_cntr_reg[1]~DUPLICATE_q\ $end
+$var wire 1 .- \ALT_INV_KEY[0]~input_o\ $end
+$var wire 1 /- \ALT_INV_KEY[1]~input_o\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0d
+1e
+xf
+1g
+1h
+1i
+1j
+1k
+1l
+0m
+0n
+0o
+zp
+0q
+0Z#
+0[#
+0\#
+0]#
+0^#
+0_#
+0`#
+0a#
+xb#
+1c#
+1d#
+xe#
+xf#
+xg#
+xh#
+xi#
+xj#
+xk#
+xl#
+xm#
+xn#
+xo#
+xp#
+xq#
+0r#
+0s#
+0t#
+0u#
+0v#
+0w#
+0x#
+0y#
+0z#
+0{#
+0|#
+z}#
+z~#
+0!$
+0"$
+0#$
+0$$
+0%$
+0&$
+0'$
+0($
+0)$
+0*$
+0+$
+0,$
+x-$
+x.$
+0/$
+00$
+x1$
+12$
+03$
+04$
+05$
+06$
+z7$
+x8$
+09$
+0:$
+0;$
+0<$
+0=$
+0>$
+1?$
+1@$
+1A$
+0B$
+0C$
+0D$
+0E$
+1F$
+1G$
+0H$
+0I$
+0J$
+0K$
+0L$
+0M$
+0N$
+0O$
+0P$
+0Q$
+0R$
+0S$
+0T$
+0U$
+0V$
+0W$
+0X$
+0Y$
+0Z$
+0[$
+0\$
+0]$
+0^$
+1_$
+0`$
+0a$
+0b$
+0c$
+0d$
+0e$
+1f$
+0g$
+0h$
+0i$
+0j$
+0k$
+0l$
+0m$
+0n$
+0o$
+0p$
+0q$
+0r$
+0s$
+0t$
+0u$
+0v$
+0w$
+0x$
+0y$
+0z$
+0{$
+1|$
+1}$
+0~$
+0!%
+0"%
+0#%
+0$%
+0%%
+0&%
+0'%
+0(%
+0)%
+0*%
+0+%
+0,%
+0-%
+0.%
+0/%
+00%
+01%
+02%
+03%
+04%
+05%
+06%
+07%
+08%
+09%
+0:%
+0;%
+0<%
+0=%
+0>%
+0?%
+0@%
+0A%
+0B%
+0C%
+0D%
+0E%
+0F%
+0G%
+0H%
+0I%
+0J%
+0K%
+0L%
+0M%
+0N%
+0O%
+0P%
+0Q%
+0R%
+0S%
+0T%
+0U%
+0V%
+0W%
+0X%
+1Y%
+0Z%
+0[%
+0\%
+0]%
+0^%
+0_%
+0`%
+0a%
+0b%
+0c%
+0d%
+0e%
+0f%
+0g%
+0h%
+0i%
+0j%
+0k%
+0l%
+0m%
+0n%
+0o%
+0p%
+0q%
+0r%
+0s%
+0t%
+0u%
+0v%
+0w%
+0x%
+0y%
+0z%
+0{%
+0|%
+0}%
+0~%
+0!&
+0"&
+0#&
+0$&
+0%&
+0&&
+0'&
+x(&
+0)&
+0*&
+0+&
+0,&
+0-&
+0.&
+1/&
+00&
+11&
+12&
+13&
+14&
+05&
+x6&
+07&
+08&
+09&
+0:&
+1;&
+1<&
+x=&
+0>&
+0?&
+0@&
+0A&
+0B&
+0C&
+0D&
+0E&
+0F&
+1G&
+0H&
+0I&
+0J&
+0K&
+0L&
+0M&
+0N&
+0O&
+0P&
+1Q&
+0R&
+1S&
+1T&
+1U&
+0V&
+0W&
+0X&
+1Y&
+1Z&
+0[&
+0\&
+0]&
+0^&
+0_&
+0`&
+0a&
+xb&
+1c&
+0d&
+xe&
+0f&
+0g&
+0h&
+0i&
+0j&
+1k&
+0l&
+0m&
+0n&
+0o&
+0p&
+1q&
+0r&
+0s&
+0t&
+0u&
+0v&
+0w&
+0x&
+0y&
+0z&
+0{&
+0|&
+0}&
+0~&
+0!'
+0"'
+0#'
+0$'
+1%'
+0&'
+0''
+0('
+1)'
+0*'
+0+'
+0,'
+0-'
+0.'
+0/'
+00'
+01'
+02'
+03'
+04'
+05'
+06'
+07'
+08'
+19'
+1:'
+0;'
+1<'
+1='
+0>'
+0?'
+0@'
+1A'
+1B'
+1C'
+0D'
+0E'
+0F'
+0G'
+0H'
+0I'
+0J'
+1K'
+0L'
+0M'
+0N'
+0O'
+0P'
+0Q'
+0R'
+0S'
+0T'
+0U'
+0V'
+0W'
+zX'
+11*
+12*
+1>*
+1?*
+1K*
+1L*
+1M*
+1N*
+1O*
+1X*
+1Y*
+1Z*
+1[*
+1\*
+1]*
+0^*
+1g*
+1h*
+1i*
+1j*
+1k*
+1l*
+0m*
+0~*
+1!+
+1"+
+1#+
+1$+
+0%+
+0&+
+1'+
+0(+
+1)+
+1*+
+0++
+1,+
+1-+
+1.+
+1/+
+10+
+11+
+12+
+03+
+14+
+15+
+16+
+1?+
+1@+
+1A+
+1J+
+1K+
+0L+
+1W+
+0X+
+0\+
+1]+
+1^+
+1_+
+1h+
+1i+
+1j+
+1o+
+1z+
+1}+
+11,
+12,
+14,
+18,
+19,
+1:,
+1;,
+1<,
+1=,
+1>,
+1?,
+1@,
+1A,
+1B,
+1C,
+1D,
+1E,
+1F,
+1G,
+1H,
+1I,
+1J,
+1K,
+1L,
+1M,
+1N,
+1O,
+1P,
+1Q,
+1R,
+1S,
+1T,
+1U,
+1V,
+1W,
+xX,
+xY,
+xZ,
+1[,
+1\,
+1],
+1^,
+1_,
+0`,
+0f,
+1g,
+1h,
+xi,
+1j,
+1k,
+1l,
+1m,
+1n,
+1o,
+0p,
+1q,
+1w,
+1x,
+1~,
+1!-
+1"-
+1#-
+0$-
+1%-
+1&-
+0'-
+1(-
+1)-
+1*-
+1+-
+1,-
+1--
+x.-
+x/-
+xr
+xs
+xt
+xu
+xv
+xw
+xx
+xy
+xz
+x{
+x|
+x}
+x~
+x!!
+0"!
+0#!
+0$!
+0%!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+1,!
+0-!
+0.!
+0/!
+00!
+01!
+02!
+13!
+04!
+05!
+06!
+07!
+08!
+09!
+1:!
+0;!
+0<!
+0=!
+0>!
+0?!
+0@!
+1A!
+0B!
+0C!
+0D!
+0E!
+0F!
+0G!
+1H!
+0I!
+0J!
+0K!
+0L!
+0M!
+0N!
+1O!
+0P!
+0Q!
+0R!
+0S!
+0T!
+0U!
+00"
+01"
+02"
+03"
+04"
+05"
+06"
+07"
+08"
+09"
+0:"
+0;"
+0<"
+0="
+0>"
+0?"
+0@"
+0A"
+0B"
+0C"
+0D"
+0E"
+0F"
+0G"
+0H"
+0I"
+0J"
+0K"
+0L"
+0M"
+0N"
+0O"
+0P"
+0Q"
+0R"
+0S"
+0T"
+0U"
+0V"
+0W"
+02#
+03#
+04#
+05#
+06#
+07#
+08#
+09#
+0:#
+0;#
+0<#
+0=#
+0>#
+0?#
+0@#
+0A#
+0B#
+0C#
+0D#
+0E#
+0F#
+0G#
+0H#
+0I#
+0J#
+0K#
+0L#
+0M#
+0N#
+0O#
+0P#
+0Q#
+0R#
+0S#
+0T#
+0U#
+0V#
+0W#
+0X#
+0Y#
+0Y'
+0Z'
+0['
+0\'
+0]'
+0^'
+0_'
+0`'
+0a'
+0b'
+0c'
+0d'
+0e'
+0f'
+0g'
+0h'
+0i'
+0j'
+0k'
+0l'
+0m'
+0n'
+0o'
+0p'
+0q'
+0r'
+0s'
+0t'
+0u'
+0v'
+0w'
+0x'
+0y'
+0z'
+0{'
+0|'
+0}'
+0~'
+0!(
+0"(
+0#(
+0$(
+0%(
+0&(
+0'(
+0((
+0)(
+0*(
+0+(
+0,(
+0-(
+0.(
+0/(
+00(
+01(
+02(
+03(
+04(
+05(
+06(
+07(
+08(
+09(
+0:(
+0;(
+0<(
+0=(
+0>(
+0?(
+0@(
+0A(
+0B(
+0C(
+0D(
+0E(
+0F(
+0G(
+0H(
+0I(
+0J(
+0K(
+0L(
+0M(
+0N(
+0O(
+0P(
+0Q(
+0R(
+0S(
+0T(
+0U(
+0V(
+0W(
+0X(
+0Y(
+0Z(
+0[(
+0\(
+0](
+0^(
+0_(
+0`(
+0a(
+0b(
+0c(
+0d(
+0e(
+0f(
+0g(
+0h(
+0i(
+0j(
+0k(
+0l(
+xm(
+0n(
+0o(
+0p(
+0q(
+0r(
+0s(
+0t(
+0u(
+0v(
+0w(
+0x(
+0y(
+xz(
+0{(
+0|(
+0}(
+x~(
+x!)
+x")
+x#)
+x$)
+x%)
+x&)
+x')
+x()
+x))
+x*)
+x+)
+x,)
+x-)
+x.)
+x/)
+x0)
+x1)
+x2)
+x3)
+x4)
+x5)
+x6)
+x7)
+x8)
+x9)
+x:)
+0;)
+x<)
+x=)
+x>)
+0?)
+0@)
+0A)
+0B)
+0C)
+0D)
+0E)
+0F)
+0G)
+0H)
+0I)
+0J)
+0K)
+0L)
+0M)
+0N)
+xO)
+xP)
+xQ)
+xR)
+xS)
+xT)
+xU)
+xV)
+xW)
+xX)
+xY)
+xZ)
+x[)
+x\)
+x])
+x^)
+x_)
+x`)
+xa)
+xb)
+xc)
+xd)
+xe)
+xf)
+xg)
+xh)
+xi)
+0j)
+xk)
+xl)
+xm)
+0n)
+0o)
+0p)
+0q)
+0r)
+0s)
+0t)
+0u)
+0v)
+0w)
+0x)
+0y)
+0z)
+0{)
+0|)
+0})
+0~)
+0!*
+0"*
+0#*
+0$*
+0%*
+0&*
+0'*
+0(*
+0)*
+0**
+0+*
+0,*
+0-*
+0.*
+1/*
+10*
+13*
+14*
+15*
+16*
+17*
+18*
+19*
+1:*
+1;*
+1<*
+1=*
+1@*
+1A*
+1B*
+1C*
+1D*
+1E*
+1F*
+1G*
+1H*
+1I*
+1J*
+1P*
+1Q*
+1R*
+1S*
+1T*
+1U*
+1V*
+1W*
+1_*
+1`*
+1a*
+1b*
+1c*
+1d*
+1e*
+1f*
+1n*
+1o*
+1p*
+1q*
+1r*
+1s*
+1t*
+1u*
+1v*
+1w*
+1x*
+1y*
+1z*
+1{*
+1|*
+1}*
+17+
+18+
+19+
+1:+
+1;+
+1<+
+1=+
+1>+
+1B+
+1C+
+1D+
+1E+
+1F+
+1G+
+1H+
+1I+
+1M+
+1N+
+1O+
+1P+
+1Q+
+1R+
+1S+
+1T+
+1U+
+1V+
+1Y+
+1Z+
+1[+
+1`+
+1a+
+1b+
+1c+
+1d+
+1e+
+1f+
+1g+
+1k+
+1l+
+1m+
+1n+
+1p+
+1q+
+xr+
+xs+
+1t+
+1u+
+1v+
+1w+
+1x+
+1y+
+1{+
+1|+
+1~+
+1!,
+1",
+1#,
+1$,
+1%,
+1&,
+1',
+1(,
+1),
+1*,
+1+,
+1,,
+1-,
+1.,
+1/,
+10,
+13,
+15,
+16,
+17,
+1a,
+1b,
+1c,
+1d,
+1e,
+1r,
+1s,
+1t,
+1u,
+1v,
+1y,
+1z,
+1{,
+1|,
+1},
+0V!
+0W!
+0X!
+0Y!
+0Z!
+0[!
+0\!
+0]!
+0^!
+0_!
+0`!
+0a!
+0b!
+0c!
+0d!
+0e!
+0f!
+0g!
+0h!
+0i!
+0~!
+0!"
+0""
+0#"
+0$"
+0%"
+0&"
+0'"
+0j!
+0k!
+0l!
+0m!
+0n!
+0o!
+0p!
+0q!
+0r!
+0s!
+0t!
+0u!
+0v!
+0w!
+0x!
+0y!
+0z!
+0{!
+0|!
+0}!
+0("
+0)"
+0*"
+0+"
+0,"
+0-"
+0."
+0/"
+0X"
+0Y"
+0Z"
+0["
+0\"
+0]"
+0^"
+0_"
+0`"
+0a"
+0b"
+0c"
+0d"
+0e"
+0f"
+0g"
+0h"
+0i"
+0j"
+0k"
+0"#
+0##
+0$#
+0%#
+0&#
+0'#
+0(#
+0)#
+0l"
+0m"
+0n"
+0o"
+0p"
+0q"
+0r"
+0s"
+0t"
+0u"
+0v"
+0w"
+0x"
+0y"
+0z"
+0{"
+0|"
+0}"
+0~"
+0!#
+0*#
+0+#
+0,#
+0-#
+0.#
+0/#
+00#
+01#
+1"
+0#
+0$
+0%
+0&
+0'
+0(
+1)
+0*
+0+
+0,
+0-
+0.
+0/
+10
+01
+02
+03
+04
+05
+06
+17
+08
+09
+0:
+0;
+0<
+0=
+1>
+0?
+0@
+0A
+0B
+0C
+0D
+1E
+0F
+0G
+0H
+0I
+0J
+0K
+xL
+xM
+xN
+xO
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+xZ
+x[
+x\
+x]
+x^
+x_
+x`
+xa
+xb
+xc
+$end
+#1000000

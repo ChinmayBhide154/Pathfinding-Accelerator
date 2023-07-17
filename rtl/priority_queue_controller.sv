@@ -22,6 +22,16 @@ module priority_queue_controller (
 );
 
 /*
+parameter INIT = 3'b000;
+parameter GET_X = 3'b001;
+parameter UPDATE_X_MEM = 3'b010;
+parameter GET_Y = 3'b011;
+parameter UPDATE_Y_MEM = 3'b100;
+parameter OPTION = 3'b101;
+parameter FINISH = 3'b110;
+*/
+
+/*
 typedef enum logic {  
     INIT = 2'b00,
     OP_SELECT = 2'b01,
