@@ -24,7 +24,37 @@ logic [7:0] XMEM_q;
 logic [7:0] YMEM_data;
 logic [7:0] YMEM_address;
 logic [7:0] YMEM_wren;
-logic [7:0] YMEM_q;
+logic [7:0] YMEM_q; 
+
+logic [2:0] mem_id_master;
+logic [7:0] address_master;				
+logic [7:0] data_master;	
+logic wren_master;
+
+Mem_Interface_Decoder (
+    .mem_id(mem_id_master),
+    .address(address_master),		
+	.clock(CLOCK_50),		
+	.data(data_master),	
+	.wren(wren_master),		
+
+    .address_mem_id0(XMEM_address),		
+	.clock_mem_id0(CLOCK_50),		
+	.data_mem_id0(XMEM_data),	
+	.wren_mem_id0(XMEM_wren),
+
+    .address_mem_id1(YMEM_address),		
+	.clock_mem_id1(CLOCK_50),		
+	.data_mem_id1(YMEM_data),	
+	.wren_mem_id1(YMEM_wren)
+);
+
+
+
+
+
+
+
 
 logic data_collection_finished;
 
@@ -47,7 +77,7 @@ assign HEX3 = Seven_Seg_Val[3];
 assign HEX4 = Seven_Seg_Val[4];
 assign HEX5 = Seven_Seg_Val[5];
 
-
+/*
 CoordinateCollector data_collector(
     .reset(1'b0),
     .clk(CLOCK_50),
@@ -67,7 +97,9 @@ CoordinateCollector data_collector(
     .mem_wren(XMEM_wren),
     .done(data_collection_finished)
 );
+*/
 
+/*
 pathfinding_mem XMEM(
     .address(XMEM_address),		
 	.clock(CLOCK_50),		
@@ -83,7 +115,7 @@ pathfinding_mem YMEM(
 	.wren(YMEM_wren),		
 	.q(YMEM_q)	
 );
-
+*/
 
 
 endmodule
