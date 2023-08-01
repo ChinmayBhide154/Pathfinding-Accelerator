@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Pathfinding
-Sun Jul 30 15:28:09 2023
+Tue Aug 01 13:42:54 2023
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Jul 30 15:28:09 2023       ;
+; Analysis & Synthesis Status     ; Successful - Tue Aug 01 13:42:54 2023       ;
 ; Quartus Prime Version           ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
 ; Revision Name                   ; Pathfinding                                 ;
 ; Top-level Entity Name           ; PathfindingAccelerator                      ;
@@ -181,11 +181,10 @@ agreement for further details.
 ; Maximum allowed            ; 14          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 14          ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-14        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -684,7 +683,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
-    Info: Processing started: Sun Jul 30 15:27:53 2023
+    Info: Processing started: Tue Aug 01 13:42:13 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Pathfinding -c Pathfinding
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
@@ -724,6 +723,7 @@ Warning (10034): Output port "address_mem_id1" at Mem_Interface_Decoder.sv(12) h
 Warning (10034): Output port "data_mem_id1" at Mem_Interface_Decoder.sv(13) has no driver File: C:/Git Repositories/Pathfinding-Accelerator/rtl/Mem_Interface_Decoder.sv Line: 13
 Warning (10034): Output port "wren_mem_id0" at Mem_Interface_Decoder.sv(10) has no driver File: C:/Git Repositories/Pathfinding-Accelerator/rtl/Mem_Interface_Decoder.sv Line: 10
 Warning (10034): Output port "wren_mem_id1" at Mem_Interface_Decoder.sv(37) has no driver File: C:/Git Repositories/Pathfinding-Accelerator/rtl/Mem_Interface_Decoder.sv Line: 37
+Warning (12158): Entity "Mem_Interface_Decoder" contains only dangling pins File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 59
 Info (12128): Elaborating entity "SevenSegmentDisplayDecoder" for hierarchy "SevenSegmentDisplayDecoder:generate_sseg_decoders[0].SevenSegmentDisplayDecoder_inst" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 80
 Info (12128): Elaborating entity "pathfinding_mem" for hierarchy "pathfinding_mem:XMEM" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 120
 Info (12128): Elaborating entity "altsyncram" for hierarchy "pathfinding_mem:XMEM|altsyncram:altsyncram_component" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/pathfinding_mem.vhd Line: 61
@@ -815,7 +815,7 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "YMEM_wren[2]" is missing source, defaulting to GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 26
     Warning (12110): Net "YMEM_wren[1]" is missing source, defaulting to GND File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 26
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.07.30.15:28:02 Progress: Loading sld97f5c935/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.08.01.13:42:44 Progress: Loading sld97f5c935/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -916,11 +916,11 @@ Info (21057): Implemented 362 device resources after synthesis - the final resou
     Info (21059): Implemented 53 output pins
     Info (21061): Implemented 274 logic cells
     Info (21064): Implemented 16 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 101 warnings
-    Info: Peak virtual memory: 4913 megabytes
-    Info: Processing ended: Sun Jul 30 15:28:09 2023
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:11
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 102 warnings
+    Info: Peak virtual memory: 4896 megabytes
+    Info: Processing ended: Tue Aug 01 13:42:54 2023
+    Info: Elapsed time: 00:00:41
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +------------------------------------------+

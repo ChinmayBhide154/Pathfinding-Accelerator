@@ -44,8 +44,8 @@ logic wren_master;
 
 Mem_Interface_Decoder (
     .mem_id(mem_id_master),
-    .address(address_master),		
-	//.clock(CLOCK_50),		
+    
+    .address(address_master),			
 	.data(data_master),	
 	.wren(wren_master),		
 
