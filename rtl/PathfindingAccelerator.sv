@@ -17,14 +17,20 @@ logic [3:0] Seven_Seg_Data[5:0];
 //XMEM interface signals
 logic [7:0] XMEM_data;
 logic [7:0] XMEM_address;
-logic [7:0] XMEM_wren;
+logic XMEM_wren;
 logic [7:0] XMEM_q;
 
 //YMEM interface signals
 logic [7:0] YMEM_data;
 logic [7:0] YMEM_address;
-logic [7:0] YMEM_wren;
+logic YMEM_wren;
 logic [7:0] YMEM_q; 
+
+//Node_ID_Mem signals
+logic [3:0] Node_ID_Mem_data;
+logic [4:0] Node_ID_Mem_address;
+logic Node_ID_Mem_wren;
+logic [3:0] Node_ID_Mem_q;
 
 // Mem_Interface_Decoder signals
 logic [7:0] XMEM_data_mid_out;
@@ -37,6 +43,11 @@ logic [7:0] YMEM_address_mid_out;
 logic [7:0] YMEM_wren_mid_out;
 logic [7:0] YMEM_q_mid_out; 
 
+logic [3:0] Node_ID_Mem_mid_data;
+logic [4:0] Node_ID_Mem_mid_address;
+logic Node_ID_Mem_mid_wren;
+logic [3:0] Node_ID_Mem_mid_q;
+
 logic [2:0] mem_id_master;
 logic [7:0] address_master;				
 logic [7:0] data_master;	
@@ -44,7 +55,7 @@ logic wren_master;
 
 Mem_Interface_Decoder (
     .mem_id(mem_id_master),
-    
+
     .address(address_master),			
 	.data(data_master),	
 	.wren(wren_master),		
@@ -65,6 +76,10 @@ assign XMEM_wren = XMEM_wren_mid_out;
 assign YMEM_address = YMEM_address_mid_out;
 assign YMEM_data = YMEM_address_mid_out;
 assign YMEM_wren = YMEM_wren_mid_out;
+
+assign Node_ID_Mem_data = Node_ID_Mem_mid_data;
+assign Node_ID_Mem_address = Node_ID_Mem_mid_address;
+assign Node_ID_Mem_wren = Node_ID_Mem_mid_wren;
 
 
 logic data_collection_finished;
@@ -109,8 +124,16 @@ CoordinateCollector data_collector(
     .done(data_collection_finished)
 );
 */
-
-
+/*
+Node_ID_Mem Node_ID_Mem(
+    .address(Node_ID_Mem_address),
+    .clock(CLOCK_50),
+    .data(Node_ID_Mem_data),
+    .wren(Node_ID_Mem_wren),
+    .q(Node_ID_Mem_q)
+);
+*/
+/*
 pathfinding_mem XMEM(
     .address(XMEM_address),		
 	.clock(CLOCK_50),		
@@ -126,7 +149,7 @@ pathfinding_mem YMEM(
 	.wren(YMEM_wren),		
 	.q(YMEM_q)	
 );
-
+*/
 
 
 endmodule

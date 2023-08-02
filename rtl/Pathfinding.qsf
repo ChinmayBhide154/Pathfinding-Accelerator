@@ -67,4 +67,6 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name SYSTEMVERILOG_FILE Dist2Node.sv
 set_global_assignment -name SYSTEMVERILOG_FILE sqrt_int.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Mem_Interface_Decoder.sv
+set_global_assignment -name QIP_FILE Node_ID_Mem.qip
+set_global_assignment -name QIP_FILE Adj_Matrix_Mem.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
