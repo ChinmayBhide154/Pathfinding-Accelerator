@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Pathfinding
-Thu Aug 03 10:26:31 2023
+Thu Aug 03 12:12:21 2023
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -40,10 +40,9 @@ Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
  32. Port Connectivity Checks: "Mem_Interface_Decoder:comb_3"
  33. In-System Memory Content Editor Settings
  34. Post-Synthesis Netlist Statistics for Top Partition
- 35. Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub
- 36. Elapsed Time Per Partition
- 37. Analysis & Synthesis Messages
- 38. Analysis & Synthesis Suppressed Messages
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
+ 37. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -70,7 +69,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Aug 03 10:26:31 2023       ;
+; Analysis & Synthesis Status     ; Successful - Thu Aug 03 12:12:21 2023       ;
 ; Quartus Prime Version           ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
 ; Revision Name                   ; Pathfinding                                 ;
 ; Top-level Entity Name           ; PathfindingAccelerator                      ;
@@ -395,33 +394,22 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                                                                                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |PathfindingAccelerator|pathfinding_mem:XMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[7]                                                                                                                                                                                                                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |PathfindingAccelerator|pathfinding_mem:XMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3]                                                                                                                                                                                                             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |PathfindingAccelerator|pathfinding_mem:YMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]                                                                                                                                                                                                                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |PathfindingAccelerator|pathfinding_mem:YMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]                                                                                                                                                                                                             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |PathfindingAccelerator|pathfinding_mem:XMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[0]                                                                                                                                                                                                                        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |PathfindingAccelerator|pathfinding_mem:YMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[6]                                                                                                                                                                                                                        ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |PathfindingAccelerator|pathfinding_mem:XMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4]                                                                                                                                                                         ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |PathfindingAccelerator|pathfinding_mem:YMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0]                                                                                                                                                                         ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 40 LEs               ; 28 LEs                 ; Yes        ; |PathfindingAccelerator|pathfinding_mem:XMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]                                                                                                                                                                              ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 40 LEs               ; 28 LEs                 ; Yes        ; |PathfindingAccelerator|pathfinding_mem:YMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]                                                                                                                                                                              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |PathfindingAccelerator|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][2]                    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |PathfindingAccelerator|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][2]                    ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |PathfindingAccelerator|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[2]                    ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |PathfindingAccelerator|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[3]                    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |PathfindingAccelerator|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][6]                           ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |PathfindingAccelerator|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][6]                           ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |PathfindingAccelerator|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[4]              ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |PathfindingAccelerator|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[0] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |PathfindingAccelerator|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[7]                             ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 64 LEs               ; 24 LEs                 ; Yes        ; |PathfindingAccelerator|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[0]                      ;
-; 28:1               ; 4 bits    ; 72 LEs        ; 56 LEs               ; 16 LEs                 ; Yes        ; |PathfindingAccelerator|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR[0]      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |PathfindingAccelerator|pathfinding_mem:XMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[7]                                                ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |PathfindingAccelerator|pathfinding_mem:XMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3]                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |PathfindingAccelerator|pathfinding_mem:YMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]                                                ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |PathfindingAccelerator|pathfinding_mem:YMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |PathfindingAccelerator|pathfinding_mem:XMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[0]                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |PathfindingAccelerator|pathfinding_mem:YMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[6]                                                ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |PathfindingAccelerator|pathfinding_mem:XMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4] ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |PathfindingAccelerator|pathfinding_mem:YMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0] ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 40 LEs               ; 28 LEs                 ; Yes        ; |PathfindingAccelerator|pathfinding_mem:XMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]      ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 40 LEs               ; 28 LEs                 ; Yes        ; |PathfindingAccelerator|pathfinding_mem:YMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------+
@@ -761,44 +749,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 
 
-+------------------------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub ;
-+-----------------------+------------------------------------------+
-; Type                  ; Count                                    ;
-+-----------------------+------------------------------------------+
-; arriav_ff             ; 114                                      ;
-;     CLR               ; 5                                        ;
-;     ENA               ; 30                                       ;
-;     ENA CLR           ; 17                                       ;
-;     ENA CLR SLD       ; 39                                       ;
-;     SCLR              ; 7                                        ;
-;     plain             ; 16                                       ;
-; arriav_lcell_comb     ; 109                                      ;
-;     extend            ; 2                                        ;
-;         7 data inputs ; 2                                        ;
-;     normal            ; 107                                      ;
-;         0 data inputs ; 1                                        ;
-;         1 data inputs ; 4                                        ;
-;         2 data inputs ; 23                                       ;
-;         3 data inputs ; 15                                       ;
-;         4 data inputs ; 10                                       ;
-;         5 data inputs ; 31                                       ;
-;         6 data inputs ; 23                                       ;
-; boundary_port         ; 165                                      ;
-;                       ;                                          ;
-; Max LUT depth         ; 3.00                                     ;
-; Average LUT depth     ; 1.33                                     ;
-+-----------------------+------------------------------------------+
-
-
-+---------------------------------+
-; Elapsed Time Per Partition      ;
-+------------------+--------------+
-; Partition Name   ; Elapsed Time ;
-+------------------+--------------+
-; sld_hub:auto_hub ; 00:00:00     ;
-; Top              ; 00:00:00     ;
-+------------------+--------------+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -807,7 +764,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
-    Info: Processing started: Thu Aug 03 10:26:14 2023
+    Info: Processing started: Thu Aug 03 12:12:04 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Pathfinding -c Pathfinding
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
@@ -835,6 +792,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file node_id
 Info (12021): Found 2 design units, including 1 entities, in source file adj_matrix_mem.vhd
     Info (12022): Found design unit 1: adj_matrix_mem-SYN File: C:/Git Repositories/Pathfinding-Accelerator/rtl/Adj_Matrix_Mem.vhd Line: 55
     Info (12023): Found entity 1: Adj_Matrix_Mem File: C:/Git Repositories/Pathfinding-Accelerator/rtl/Adj_Matrix_Mem.vhd Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file coordinatecollector_tb.sv
+    Info (12023): Found entity 1: CoordinateCollector_tb File: C:/Git Repositories/Pathfinding-Accelerator/rtl/CoordinateCollector_tb.sv Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at PathfindingAccelerator.sv(136): created implicit net for "x_data" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 136
 Warning (10236): Verilog HDL Implicit Net warning at PathfindingAccelerator.sv(137): created implicit net for "y_data" File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 137
 Critical Warning (10846): Verilog HDL Instantiation warning at PathfindingAccelerator.sv(70): instance has no name File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 70
@@ -942,7 +901,7 @@ Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "path
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "pathfinding_mem:XMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "pathfinding_mem:XMEM|altsyncram:altsyncram_component|altsyncram_do14:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.08.03.10:26:24 Progress: Loading sld97f5c935/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.08.03.12:12:14 Progress: Loading sld97f5c935/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1021,7 +980,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Git Repositories/Pathfinding-Accelerator/rtl/PathfindingAccelerator.sv Line: 12
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 10 registers lost all their fanouts during netlist optimizations.
-Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
 Info (144001): Generated suppressed messages file C:/Git Repositories/Pathfinding-Accelerator/rtl/Pathfinding.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 9 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1046,10 +1004,10 @@ Info (21057): Implemented 362 device resources after synthesis - the final resou
     Info (21061): Implemented 274 logic cells
     Info (21064): Implemented 16 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 97 warnings
-    Info: Peak virtual memory: 4881 megabytes
-    Info: Processing ended: Thu Aug 03 10:26:31 2023
+    Info: Peak virtual memory: 4883 megabytes
+    Info: Processing ended: Thu Aug 03 12:12:21 2023
     Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Total CPU time (on all processors): 00:00:10
 
 
 +------------------------------------------+
