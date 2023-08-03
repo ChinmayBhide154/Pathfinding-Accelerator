@@ -4,7 +4,7 @@ module CoordinateCollector_tb;
     parameter CLK_PERIOD = 10; // Clock period in time units
     
     // Inputs
-    reg reset;
+    reg reset, clk;
     reg [7:0] x_in, y_in;
     reg write_en, enterNewCoord, finishInit;
 
@@ -40,7 +40,7 @@ module CoordinateCollector_tb;
     );
 
     // Clock generation
-    reg clk = 0;
+    initial clk = 0;
     
     always #((CLK_PERIOD)/2) clk = ~clk;
 
