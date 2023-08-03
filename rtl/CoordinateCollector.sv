@@ -10,6 +10,9 @@ module CoordinateCollector (
     output logic [7:0] x_out,
     output logic [7:0] y_out,
 
+    output logic update_x_mem,
+    output logic update_y_mem,
+
     output logic [3:0] hex0,
     output logic [3:0] hex1,
     output logic [3:0] hex2,
@@ -17,6 +20,7 @@ module CoordinateCollector (
     output logic [3:0] hex4,
     output logic [3:0] hex5,
 
+    output logic [7:0] address,
     output logic mem_wren,
     output logic done
 );
@@ -31,8 +35,6 @@ parameter OPTION = 3'b101;
 parameter FINISH = 3'b110;
 
 logic [2:0] state, next;
-
-logic [7:0] address;
 
 always_ff @(posedge clk or posedge reset) begin
     if(reset) state <= INIT;
@@ -86,20 +88,30 @@ always_ff @(posedge clk) begin
             done <= 1'b0;
 
             address <= 8'h00;
+
+            update_x_mem = 1'b0;
+            update_y_mem = 1'b0;
         end
 
         GET_X: begin
             x_out <= x_in;
             mem_wren <= 1'b1;
+            update_x_mem = 1'b1;
+            update_y_mem = 1'b0;
         end
 
         GET_Y: begin
             y_out <= y_in;
+            update_x_mem = 1'b0;
+            update_y_mem = 1'b1;
         end
 
         OPTION: begin
             mem_wren <= 1'b0;
             address = address + 8'b00000001;
+
+            update_x_mem = 1'b0;
+            update_y_mem = 1'b0;
         end
 
         FINISH: begin
@@ -117,6 +129,9 @@ always_ff @(posedge clk) begin
             done <= 1'b1;
 
             address <= 8'h00;
+
+            update_x_mem = 1'b0;
+            update_y_mem = 1'b0;
         end
     endcase
 end

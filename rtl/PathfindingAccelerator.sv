@@ -81,6 +81,22 @@ assign Node_ID_Mem_data = Node_ID_Mem_mid_data;
 assign Node_ID_Mem_address = Node_ID_Mem_mid_address;
 assign Node_ID_Mem_wren = Node_ID_Mem_mid_wren;
 
+logic [7:0] x_data_in;
+logic [7:0] y_data_in;
+logic update_x_mem;
+logic update_y_mem;
+
+always_comb begin
+    if(update_x_mem) data_master = x_data;
+    else if(update_y_mem) data_master = y_data;
+    else data_master = x_data;
+end
+
+always_comb begin
+    if(update_x_mem & !update_y_mem) address_master = XMEM_address;
+    else address_master = YMEM_address;
+end
+
 
 logic data_collection_finished;
 
@@ -103,27 +119,34 @@ assign HEX3 = Seven_Seg_Val[3];
 assign HEX4 = Seven_Seg_Val[4];
 assign HEX5 = Seven_Seg_Val[5];
 
-/*
+
 CoordinateCollector data_collector(
+    //Inputs
     .reset(1'b0),
     .clk(CLOCK_50),
-    .x_in(8'b0),
-    .y_in(8'b0),
+    .x_in(SW[7:0]),
+    .y_in(SW[7:0]),
     .write_en(1'b1),
     .enterNewCoord(~KEY[1]),
     .finishInit(~KEY[0]),
-    .x_out(x_data_in),
-    .y_out(y_data_in),
+
+    //Outputs
+    .update_x_mem(update_x_mem),
+    .update_y_mem(update_y_mem),
+    .x_out(x_data),
+    .y_out(y_data),
     .hex0(Seven_Seg_Data[0]),
     .hex1(Seven_Seg_Data[1]),
     .hex2(Seven_Seg_Data[2]),
     .hex3(Seven_Seg_Data[3]),
     .hex4(Seven_Seg_Data[4]),
     .hex5(Seven_Seg_Data[5]),
-    .mem_wren(XMEM_wren),
+    .address(address_master),
+    .mem_wren(1'b1),
     .done(data_collection_finished)
 );
-*/
+
+
 /*
 Node_ID_Mem Node_ID_Mem(
     .address(Node_ID_Mem_address),
@@ -133,7 +156,7 @@ Node_ID_Mem Node_ID_Mem(
     .q(Node_ID_Mem_q)
 );
 */
-/*
+
 pathfinding_mem XMEM(
     .address(XMEM_address),		
 	.clock(CLOCK_50),		
@@ -149,7 +172,7 @@ pathfinding_mem YMEM(
 	.wren(YMEM_wren),		
 	.q(YMEM_q)	
 );
-*/
+
 
 
 endmodule
